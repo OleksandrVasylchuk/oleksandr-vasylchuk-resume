@@ -1,0 +1,26 @@
+:root {
+  --main-color: #080808;
+  --title-color: #142227;
+  --title-color-black: rgb(6, 0, 29);
+  --light-color: rgb(0, 0, 0);
+  --sidebar-color: rgb(13, 54, 39);
+  --white-color: #ffffff;
+  --bacgraund-image: url(./Components/Images/завантаження.jpg);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white-color);
+  font-family: Calibri;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+ol,
+ul {
+  padding-left: 0px;
+}
