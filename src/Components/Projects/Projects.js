@@ -109,9 +109,6 @@ export default function Projects() {
         <Submenu>Team Project. Web app for calculation your finances.</Submenu>
       </Experience> */}
       <Experience>
-        <Link target="_blank" href="https://crystal-professional.eu/">
-          crystal-professional
-        </Link>
         <Link target="_blank" href="https://www.lemberg-ikra.com.ua/">
           lemberg-ikra.com.ua
         </Link>
@@ -123,9 +120,6 @@ export default function Projects() {
         </Link>
         <Link target="_blank" href="https://www.touchspa.com.ua/">
           touchspa.com.ua
-        </Link>
-        <Link target="_blank" href="https://woofbox.pl/">
-          woofbox
         </Link>
 
         <Name>

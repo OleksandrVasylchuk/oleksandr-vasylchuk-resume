@@ -1,13 +1,14 @@
 :root {
-  --main-color: #080808;
-  --title-color: #142227;
-  --title-color-black: rgb(6, 0, 29);
-  --light-color: rgb(0, 0, 0);
-  --sidebar-color: rgb(13, 54, 39);
-  --white-color: #ffffff;
-  --bacgraund-image: url(./Components/Images/завантаження.jpg);
+  --bg-color: #f3f3f3; /* Light background color */
+  --main-title-color: #0a1f44; /* Dark navy for main title */
+  --section-title-color: #1f6d5c; /* Teal green for section titles */
+  --text-color: #333333; /* Dark grey for body text */
+  --highlight-color: #4db6ac; /* Light teal for highlights */
+  --sidebar-bg-color: #173d34; /* Darker teal for side panel */
+  --link-color: #3a9d8f; /* Accent teal for links */
+  --soft-skills-bg-color: #d5e9e5; /* Light teal for soft skills background */
+  --white-color: #ffffff; /* Pure white */
 }
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -16,8 +17,7 @@
 body {
   background: var(--white-color);
   font-family: Calibri;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 ol,
