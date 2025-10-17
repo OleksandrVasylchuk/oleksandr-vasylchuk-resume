@@ -32,11 +32,26 @@ export default function Work() {
           <Link target="_blank" href="https://ezkratom.com/">
             ezkratom
           </Link>
+          <Link target="_blank" href="https://cobble.london/">
+            cobble.london
+          </Link>
+          <Link target="_blank" href="https://sunnynails.sg/">
+            sunnynails
+          </Link>
+          <Link target="_blank" href="https://imaginemagazine.co/">
+            imaginemagazine
+          </Link>
+          <Link target="_blank" href="https://staging-105f5b6.ingress-bonde.ewp.live/">
+            hashira-labs
+          </Link>
+          <Link target="_blank" href="https://www.wondermath.com/">
+            wondermath
+          </Link>
           <br></br>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, AJAX, WordPress, ACF/Flexible Content<Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, AJAX, WordPress, ACF/Flexible Content, APIs,<Bold>]</Bold>
           </Name>
-          <Submenu>Corporate projects for Qwerty-Soft and e-commerce online stores.</Submenu>
+          <Submenu>I develop outsourced projects for Qwerty-Soft, including e-commerce online stores, booking platforms with personal dashboards, APIs, and other complex services. Additionally, I manage and delegate tasks to junior developers, supporting their growth and contribution. Through effective delegation, I nurture a collaborative, learning-focused environment while upholding high standards of quality and responsiveness in web solutions.</Submenu>
         </Experience>
       </Organisation>
 
@@ -49,7 +64,7 @@ export default function Work() {
 
         {/* <Time>Development of new sites. HTML5, CSS3, SASS, PHP, JS, JQUERY, AJAX, WordPress, ACF,</Time> */}
         <Time>
-          <About></About>November 2023 - Present<Divider>|</Divider>
+          <About></About>November 2023 - August 2024<Divider>|</Divider>
           Ukraine
         </Time>
         <Experience>
@@ -59,17 +74,11 @@ export default function Work() {
           <Link target="_blank" href="https://migrantgo.eu/">
             MIGRANT GO
           </Link>
-          <Link target="_blank" href="https://minesapostas.com/">
-            minesapostas.com
-          </Link>
           <Link target="_blank" href="https://fitcakeursynow.com/">
             fitcakeursynow.com
           </Link>
           <Link target="_blank" href="https://crystal-professional.eu/">
             crystal-professional
-          </Link>
-          <Link target="_blank" href="https://woofbox.pl/">
-            woofbox
           </Link>
           <br></br>
           <Name>
@@ -90,11 +99,14 @@ export default function Work() {
           <About></About>February - June 2024 <Divider> | </Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://thedigitalelevator.staging.altumagency.com/">
-            AltumAgency
-          </Link>
           <Link target="_blank" href="https://lacto-cure.ua/">
             ЛАКТО-КЮР®
+          </Link>
+          <Link target="_blank" href="https://paradisecaps.com/">
+            paradisecaps.com
+          </Link>
+          <Link target="_blank" href="https://www.touchspa.com.ua/">
+            touchspa.com.ua
           </Link>
           <br></br>
           <Name>
@@ -150,9 +162,6 @@ export default function Work() {
         <Experience>
           <Link target="_blank" href="https://ein-des-ein.com/">
             ein-des-ein.com
-          </Link>
-          <Link target="_blank" href="https://bosphortour.uz/">
-            bosphortour.uz
           </Link>
           <br />
           <Name>
@@ -227,17 +236,23 @@ export default function Work() {
         </Time>
         <Time>Worked on various e-commerce projects for both companies and individual clients, providing full-stack development and customization. These projects included:</Time>
         <Experience>
+          <Link target="_blank" href="https://www.greengaia.com.ua/">
+            greengaia
+          </Link>
+          <Link target="_blank" href="https://www.mudririshennya.com/">
+            mudririshennya
+          </Link>
+          <Link target="_blank" href="https://eiwa-gracia.com/en//">
+            eiwa-gracia
+          </Link>
+          <Link target="_blank" href="https://www.ikra-lemberg.in.ua/">
+            ikra-lemberg.in.ua
+          </Link>
           <Link target="_blank" href="https://www.lemberg-ikra.com.ua/">
             lemberg-ikra.com.ua
           </Link>
           <Link target="_blank" href="https://lemberg-ikra.com/">
             lemberg-ikra.com
-          </Link>
-          <Link target="_blank" href="https://paradisecaps.com/">
-            paradisecaps.com
-          </Link>
-          <Link target="_blank" href="https://www.touchspa.com.ua/">
-            touchspa.com.ua
           </Link>
           <br />
           <Name>
