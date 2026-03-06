@@ -1,14 +1,6 @@
 import styled from "@emotion/styled";
 
 export const Seitbar = styled.aside`
-  /* background: var(--bacgraund-image) no-repeat center center fixed; */
-  /* background: rgb(28, 35, 84);
-  background: linear-gradient(
-    82deg,
-    rgba(28, 35, 84, 1) 0%,
-    rgba(2, 2, 59, 1) 48%,
-    rgba(28, 35, 84, 1) 100%
-  ); */
   background: #142227;
   background-size: cover;
   width: 450px;
@@ -57,7 +49,6 @@ export const Hi = styled.span`
 export const Column = styled.div``;
 
 export const Photo = styled.img`
-  /* border-radius: 50%; */
   box-shadow: inset 0px 10px 10px 10px var(--main-color);
   width: 350px;
   margin-bottom: 20px;

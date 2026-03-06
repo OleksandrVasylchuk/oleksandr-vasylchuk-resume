@@ -34,7 +34,6 @@ export const Submenu = styled.p`
 
 export const List = styled.ol`
   color: rgb(21, 4, 83);
-  /* border-bottom: medium dashed var(--title-color); */
 `;
 
 export const Bold = styled.b``;

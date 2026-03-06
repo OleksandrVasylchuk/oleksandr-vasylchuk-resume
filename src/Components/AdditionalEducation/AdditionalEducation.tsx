@@ -1,14 +1,6 @@
-import React from "react";
-import {
-  About,
-  Company,
-  Divider,
-  Time,
-  Organisation,
-  List,
-} from "./AdditionalEducation.styled";
+import { About, Company, Divider, Time, Organisation, List } from "./AdditionalEducation.styled";
 
-export default function Education() {
+export default function AdditionalEducation() {
   return (
     <List>
       <Organisation>

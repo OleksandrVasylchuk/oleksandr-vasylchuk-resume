@@ -1,4 +1,3 @@
-import React from "react";
 import { About, Company, Divider, Time, Organisation, List } from "./Education.styled";
 
 export default function Education() {
@@ -23,6 +22,7 @@ export default function Education() {
           2015 - 2020 <Divider>|</Divider> Ukraine
         </Time>
       </Organisation>
+
       <Organisation>
         <Time>
           <Company>NIZHYN MEDICAL COLLEGE</Company>

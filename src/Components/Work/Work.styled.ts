@@ -34,8 +34,6 @@ export const Organisation = styled.li`
 
 export const List = styled.ol``;
 
-export const Lists = styled.ul``;
-
 export const Item = styled.p`
   color: var(--main-color);
   padding-top: 10px;
