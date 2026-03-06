@@ -1,14 +1,19 @@
-import MYPhoto from "../Images/photo.jpg";
+﻿import MYPhoto from "../Images/photo.jpg";
 import { HiOutlinePhone, HiOutlineMailOpen } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
-import { Photo, Column, Contact, Section, Item, Link, List, Seitbar, Title, Hi } from "./Asside.styled";
+import { Photo, PhotoWrapper, Column, Contact, Section, Item, Tag, TagList, Link, List, Seitbar, Title, Hi } from "./Asside.styled";
+
+const techSkills = ["HTML5", "CSS3", "SASS", "BEM", "JavaScript ES6+", "TypeScript", "React", "PHP", "Composer", "WordPress", "WP-CLI", "Gutenberg Blocks", "WooCommerce", "ACF", "Elementor", "Timber/Twig", "MySQL", "REST API", "AJAX", "jQuery", "Docker", "Linux / SSH", "Nginx", "CI/CD", "Git", "Webpack", "Vite", "Figma"];
 
 export default function Asside() {
   return (
     <Seitbar>
       <Column>
-        <Photo src={MYPhoto} alt="My photo" />
+        <PhotoWrapper>
+          <Photo src={MYPhoto} alt="Oleksandr Vasylchuk" />
+        </PhotoWrapper>
       </Column>
+
       <Section>
         <Title>Contacts</Title>
         <List>
@@ -49,44 +54,32 @@ export default function Asside() {
 
       <Section>
         <Title>Tech Skills</Title>
-        <List>
-          <Item>HTML5/CSS3/SASS/BEM</Item>
-          <Item>JavaScript Es6+</Item>
-          <Item>WooCommerce</Item>
-          <Item>WordPress</Item>
-          <Item>Elementor</Item>
-          <Item>WebPack</Item>
-          <Item>VS Code</Item>
-          <Item>XAMPP</Item>
-          <Item>Docker</Item>
-          <Item>JQuery</Item>
-          <Item>Figma</Item>
-          <Item>AJAX</Item>
-          <Item>NPM</Item>
-          <Item>PHP</Item>
-          <Item>ACF</Item>
-          <Item>Git</Item>
-        </List>
+        <TagList>
+          {techSkills.map((skill) => (
+            <Tag key={skill}>{skill}</Tag>
+          ))}
+        </TagList>
       </Section>
 
       <Section>
         <Title>Soft Skills</Title>
         <List>
-          <Item>Funny</Item>
-          <Item>Friendly</Item>
-          <Item>Honesty</Item>
-          <Item>Teamwork</Item>
-          <Item>Responsibility</Item>
-          <Item>Communicable</Item>
-          <Item>Self development</Item>
+          <Item>Team Leadership &amp; Mentoring</Item>
+          <Item>Technical Architecture &amp; Planning</Item>
+          <Item>Task Delegation &amp; Prioritization</Item>
+          <Item>Clean Code &amp; Code Review</Item>
+          <Item>Agile / Scrum</Item>
+          <Item>Proactive Communication</Item>
+          <Item>Problem Solving</Item>
+          <Item>Continuous Learning</Item>
         </List>
       </Section>
 
       <Section>
-        <Title>Language skills</Title>
+        <Title>Languages</Title>
         <List>
-          <Item>English - Intermediate</Item>
-          <Item>Ukrainian - Mastery</Item>
+          <Item>English — Intermediate</Item>
+          <Item>Ukrainian — Native</Item>
         </List>
       </Section>
     </Seitbar>

@@ -1,236 +1,218 @@
-import { About, Company, Divider, Time, Organisation, List } from "./Work.styled";
-import { Name, Submenu, Link, Bold, Experience } from "../Projects/Projects.styled";
+﻿import { About, Company, Divider, Time, Organisation, List } from "./Work.styled";
+import { Name, Submenu, Link, Bold, Experience, LinkGroup } from "../Projects/Projects.styled";
 
 export default function Work() {
   return (
     <List>
       <Organisation>
+        <Company>
+          Tech Lead Full-Stack WordPress Developer <About>Qwerty-Soft</About>
+        </Company>
         <Time>
-          <Company>
-            Tech Lead Full-Stack WordPress Developer. <About>Qwerty-Soft</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>August 2024 - Present<Divider>|</Divider>
-          Ukraine
+          August 2024 – Present <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://qwerty-soft.com/">
-            Qwerty-Soft
-          </Link>
-          <Link target="_blank" href="https://ezkratom.com/">
-            ezkratom
-          </Link>
-          <Link target="_blank" href="https://cobble.london/">
-            cobble.london
-          </Link>
-          <Link target="_blank" href="https://sunnynails.sg/">
-            sunnynails
-          </Link>
-          <Link target="_blank" href="https://imaginemagazine.co/">
-            imaginemagazine
-          </Link>
-          <Link target="_blank" href="https://staging-105f5b6.ingress-bonde.ewp.live/">
-            hashira-labs
-          </Link>
-          <Link target="_blank" href="https://www.wondermath.com/">
-            wondermath
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://qwerty-soft.com/">
+              Qwerty-Soft
+            </Link>
+            <Link target="_blank" href="https://ezkratom.com/">
+              ezkratom
+            </Link>
+            <Link target="_blank" href="https://cobble.london/">
+              cobble.london
+            </Link>
+            <Link target="_blank" href="https://sunnynails.sg/">
+              sunnynails
+            </Link>
+            <Link target="_blank" href="https://imaginemagazine.co/">
+              imaginemagazine
+            </Link>
+            <Link target="_blank" href="https://staging-105f5b6.ingress-bonde.ewp.live/">
+              hashira-labs
+            </Link>
+            <Link target="_blank" href="https://www.wondermath.com/">
+              wondermath
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, AJAX, WordPress, ACF/Flexible Content, APIs,
-            <Bold>]</Bold>
+            <Bold>[</Bold> PHP, WordPress, WooCommerce, ACF, REST API, JavaScript, React, Docker, Git, CI/CD <Bold>]</Bold>
           </Name>
-          <Submenu>I develop outsourced projects for Qwerty-Soft, including e-commerce online stores, booking platforms with personal dashboards, APIs, and other complex services. Additionally, I manage and delegate tasks to junior developers, supporting their growth and contribution. Through effective delegation, I nurture a collaborative, learning-focused environment while upholding high standards of quality and responsiveness in web solutions.</Submenu>
+          <Submenu>Architect and deliver outsourced products: WooCommerce stores, booking platforms with member dashboards, and API-driven services. Build complex custom plugins with heavy backend logic and third-party API integrations (payment gateways, CRMs, external data feeds). Set up Git-based CI/CD pipelines for automated staging and production deployments. Define tech stack, conduct code reviews, break down tasks and mentor junior developers across multiple concurrent projects.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Middle Full-Stack WordPress Developer <About>SEOMATICA</About>
+        </Company>
         <Time>
-          <Company>
-            Middle Full Stack WordPress Developer. <About>SEOMATICA</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>November 2023 - August 2024<Divider>|</Divider>
-          Ukraine
+          November 2023 – August 2024 <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://seomatica.io/">
-            SEOMATICA
-          </Link>
-          <Link target="_blank" href="https://migrantgo.eu/">
-            MIGRANT GO
-          </Link>
-          <Link target="_blank" href="https://fitcakeursynow.com/">
-            fitcakeursynow.com
-          </Link>
-          <Link target="_blank" href="https://crystal-professional.eu/">
-            crystal-professional
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://seomatica.io/">
+              SEOMATICA
+            </Link>
+            <Link target="_blank" href="https://migrantgo.eu/">
+              MIGRANT GO
+            </Link>
+            <Link target="_blank" href="https://fitcakeursynow.com/">
+              fitcakeursynow.com
+            </Link>
+            <Link target="_blank" href="https://crystal-professional.eu/">
+              crystal-professional
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, AJAX, WordPress, ACF/Flexible Content<Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, jQuery, AJAX, WordPress, ACF/Flexible Content <Bold>]</Bold>
           </Name>
-          <Submenu>Corporate projects for SEOMATICA and business card sites with attractive gaming features.</Submenu>
+          <Submenu>Built corporate and marketing WordPress sites with custom ACF-based page builders, JavaScript-driven UI interactions, and pixel-perfect Figma-to-code implementation. Maintained cross-browser compatibility and performance standards.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Middle Full-Stack WordPress Developer <About>DevOut Labs · SEOTM</About>
+        </Company>
         <Time>
-          <Company>
-            Middle Full Stack WordPress Developer. <About>DevOut Labs, SEOTM Digital Agency</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>February - June 2024 <Divider>|</Divider> Ukraine
+          February – June 2024 <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://lacto-cure.ua/">
-            ЛАКТО-КЮР®
-          </Link>
-          <Link target="_blank" href="https://paradisecaps.com/">
-            paradisecaps.com
-          </Link>
-          <Link target="_blank" href="https://www.touchspa.com.ua/">
-            touchspa.com.ua
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://lacto-cure.ua/">
+              ЛАКТО-КЮР®
+            </Link>
+            <Link target="_blank" href="https://paradisecaps.com/">
+              paradisecaps.com
+            </Link>
+            <Link target="_blank" href="https://www.touchspa.com.ua/">
+              touchspa.com.ua
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, WordPress, ACF, Flexible Content, Webpack
-            <Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, jQuery, WordPress, ACF, Flexible Content, Webpack <Bold>]</Bold>
           </Name>
-          <Submenu>Project: AltumAgency for DevOut Labs and ЛАКТО-КЮР® SEOTM Digital Agency.</Submenu>
+          <Submenu>Part-time concurrent role alongside SEOMATICA. Developed custom WordPress themes for two agencies, implemented ACF Flexible Content layouts, Webpack build pipelines, and responsive interfaces from Figma designs.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Full-Stack WordPress Developer <About>Smart Pipl</About>
+        </Company>
         <Time>
-          <Company>
-            Full Stack. <About>Smart Pipl</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>February 2023 - November 2023<Divider>|</Divider>Ukraine
+          February 2023 – November 2023 <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://stirnweiss-brenner.de/">
-            stirnweiss-brenner.de
-          </Link>
-          <Link target="_blank" href="https://aisuperior.com/">
-            aisuperior.com
-          </Link>
-          <Link target="_blank" href="https://scaleops.com/">
-            scaleops
-          </Link>
-          <Link target="_blank" href="https://multiverse.media/">
-            multiverse.media
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://stirnweiss-brenner.de/">
+              stirnweiss-brenner.de
+            </Link>
+            <Link target="_blank" href="https://aisuperior.com/">
+              aisuperior.com
+            </Link>
+            <Link target="_blank" href="https://scaleops.com/">
+              scaleops
+            </Link>
+            <Link target="_blank" href="https://multiverse.media/">
+              multiverse.media
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, PHP, JS, JQUERY, AJAX, WordPress, ACF, Elementor <Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, PHP, JS, jQuery, AJAX, WordPress, ACF, Elementor <Bold>]</Bold>
           </Name>
-          <Submenu>Sites for various companies. Business card sites to advertise programs.</Submenu>
+          <Submenu>Delivered corporate and SaaS marketing sites for international clients. Integrated third-party APIs, built custom Elementor widgets and ACF-driven content structures with multilingual support.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Full-Stack WordPress Developer <About>EIN-DES-EIN</About>
+        </Company>
         <Time>
-          <Company>
-            Full Stack. <About>EIN-DES-EIN</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>October 2022 - February 2023<Divider>|</Divider>Ukraine
+          October 2022 – February 2023 <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://ein-des-ein.com/">
-            ein-des-ein.com
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://ein-des-ein.com/">
+              ein-des-ein.com
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, WordPress, ACF, PUG<Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, jQuery, WordPress, ACF, PUG <Bold>]</Bold>
           </Name>
-          <Submenu>Corporate projects for EIN-DES-EIN and business card sites to advertise apps.</Submenu>
+          <Submenu>Built WordPress promotional sites for mobile apps using PUG templating, strict BEM methodology and custom plugin development. Established component-based workflow and code style standards within the team.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Full-Stack WordPress Developer <About>TRIONIKA</About>
+        </Company>
         <Time>
-          <Company>
-            Full Stack. <About>TRIONIKA</About>
-          </Company>
-        </Time>
-        <Time>
-          <About></About>February 2022 - October 2022<Divider>|</Divider>Ukraine
+          February 2022 – October 2022 <Divider>|</Divider> Ukraine
         </Time>
         <Experience>
-          <Link target="_blank" href="https://slotogate.com/">
-            slotogate.com
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://slotogate.com/">
+              slotogate.com
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, JQUERY, WordPress, ACF, WPML <Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, BEM, PHP, JS, jQuery, WordPress, ACF, WPML <Bold>]</Bold>
           </Name>
-          <Submenu>Projects for TRIONIKA. Responsive layout of WordPress templates based on layouts in Figma with effective optimization under Google Lighthouse. Creation of custom post types, taxonomies.</Submenu>
+          <Submenu>Built responsive WordPress templates from Figma layouts with Google Lighthouse score optimization. Developed custom post types, taxonomies, WPML-based multilingual structure and ACF field groups.</Submenu>
         </Experience>
       </Organisation>
 
       <Organisation>
+        <Company>
+          Full-Stack Developer <About>ASIA GROUP</About>
+        </Company>
         <Time>
-          <Company>
-            Full Stack. <About>ASIA GROUP</About>
-          </Company>
+          November 2021 – February 2022 <Divider>|</Divider> Ukraine
         </Time>
-        <Time>Development of a new site. Developing existing sites, adding new pages, changing content. Work with Laravel, WordPress, PHP, HTML, CSS, JS</Time>
-        <Time>
-          <About></About>November 2021 - February 2022<Divider>|</Divider>
-          Ukraine
-        </Time>
+        <Submenu>Maintained and extended Laravel and WordPress projects: new feature pages, content updates, bug fixes and performance improvements across multiple live client sites.</Submenu>
       </Organisation>
 
       <Organisation>
+        <Company>
+          SEO Full-Stack Developer <About>Semalt</About>
+        </Company>
         <Time>
-          <Company>
-            SEO Full Stack Developer. <About>Semalt</About>
-          </Company>
+          June 2021 – November 2021 <Divider>|</Divider> Ukraine
         </Time>
-        <Time>Analysis and detection of errors that hinder SEO promotion, their correction, as well as comprehensive optimization to improve visibility in search engines and attract the target audience. I have experience working with various CMS, and Docker and databases</Time>
-        <Time>
-          <About></About>June 2021 - November 2021<Divider>|</Divider>Ukraine
-        </Time>
+        <Submenu>Performed technical SEO audits and Core Web Vitals optimizations for client sites. Resolved crawl errors, improved LCP/CLS scores, customized CMS structures, managed Docker environments and MySQL databases.</Submenu>
       </Organisation>
 
       <Organisation>
-        <Time>
-          <Company>Additional projects</Company>
-        </Time>
-        <Time>Worked on various e-commerce projects for both companies and individual clients, providing full-stack development and customization. These projects included:</Time>
+        <Company>Additional Projects</Company>
         <Experience>
-          <Link target="_blank" href="https://www.greengaia.com.ua/">
-            greengaia
-          </Link>
-          <Link target="_blank" href="https://www.mudririshennya.com/">
-            mudririshennya
-          </Link>
-          <Link target="_blank" href="https://eiwa-gracia.com/en//">
-            eiwa-gracia
-          </Link>
-          <Link target="_blank" href="https://www.ikra-lemberg.in.ua/">
-            ikra-lemberg.in.ua
-          </Link>
-          <Link target="_blank" href="https://www.lemberg-ikra.com.ua/">
-            lemberg-ikra.com.ua
-          </Link>
-          <Link target="_blank" href="https://lemberg-ikra.com/">
-            lemberg-ikra.com
-          </Link>
-          <br />
+          <LinkGroup>
+            <Link target="_blank" href="https://www.greengaia.com.ua/">
+              greengaia
+            </Link>
+            <Link target="_blank" href="https://www.mudririshennya.com/">
+              mudririshennya
+            </Link>
+            <Link target="_blank" href="https://eiwa-gracia.com/en//">
+              eiwa-gracia
+            </Link>
+            <Link target="_blank" href="https://www.ikra-lemberg.in.ua/">
+              ikra-lemberg.in.ua
+            </Link>
+            <Link target="_blank" href="https://www.lemberg-ikra.com.ua/">
+              lemberg-ikra.com.ua
+            </Link>
+            <Link target="_blank" href="https://lemberg-ikra.com/">
+              lemberg-ikra.com
+            </Link>
+          </LinkGroup>
           <Name>
-            <Bold>[</Bold> HTML5, CSS3, SASS, PHP, JS, JQUERY, AJAX, WordPress, ACF, Flexible Content, Elementor
-            <Bold>]</Bold>
+            <Bold>[</Bold> HTML5, CSS3, SASS, PHP, JS, jQuery, AJAX, WordPress, ACF, Flexible Content, Elementor <Bold>]</Bold>
           </Name>
-          <Submenu>Focused on building responsive, user-friendly interfaces and implementing advanced features using WordPress and ACF for dynamic content management. Delivered customized solutions to meet each client's unique requirements.</Submenu>
+          <Submenu>E-commerce and custom WordPress projects for businesses and individual clients. Responsive interfaces, advanced ACF, dynamic content management.</Submenu>
         </Experience>
       </Organisation>
     </List>

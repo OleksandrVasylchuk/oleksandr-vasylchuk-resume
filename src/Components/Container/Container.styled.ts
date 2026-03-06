@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  width: 1240px;
-  min-height: 1740px;
-  background: #f4f4f4;
+  width: 1280px;
+  min-height: 100vh;
+  background: var(--main-bg);
   display: flex;
-  margin: 10px auto;
-  -webkit-box-shadow: 0px 2px 15px 5px var(--light-color);
-  -moz-box-shadow: 0px 2px 15px 5px var(--light-color);
-  box-shadow: 0px 2px 15px 5px var(--light-color);
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 `;

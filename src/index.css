@@ -1,26 +1,52 @@
 :root {
-  --bg-color: #f3f3f3; /* Light background color */
-  --main-title-color: #0a1f44; /* Dark navy for main title */
-  --section-title-color: #1f6d5c; /* Teal green for section titles */
-  --text-color: #333333; /* Dark grey for body text */
-  --highlight-color: #4db6ac; /* Light teal for highlights */
-  --sidebar-bg-color: #173d34; /* Darker teal for side panel */
-  --link-color: #3a9d8f; /* Accent teal for links */
-  --soft-skills-bg-color: #d5e9e5; /* Light teal for soft skills background */
-  --white-color: #ffffff; /* Pure white */
+  --sidebar-bg: #0f172a;
+  --sidebar-accent: #38bdf8;
+  --sidebar-text: rgba(255, 255, 255, 0.85);
+  --sidebar-muted: #94a3b8; /* 6.4:1 on sidebar-bg ✓ */
+  --main-bg: #ffffff;
+  --page-bg: #f1f5f9;
+  --accent: #0ea5e9; /* decorative only: borders, backgrounds */
+  --accent-text: #0369a1; /* 5.9:1 on white, 5.1:1 on accent-light ✓ */
+  --accent-light: rgba(14, 165, 233, 0.1);
+  --accent-border: rgba(14, 165, 233, 0.3);
+  --title-color: #0f172a;
+  --text-color: #475569;
+  --light-color: #5a6a7e; /* 5.5:1 on white ✓ */
+  --main-color: #475569;
+  --border-color: #e2e8f0;
+  --tag-bg: rgba(56, 189, 248, 0.12);
+  --tag-border: rgba(56, 189, 248, 0.28);
+  --tag-text: #bae6fd;
+  --white-color: #ffffff;
+  --shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.22);
 }
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: var(--white-color);
-  font-family: Calibri;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--page-bg);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ol,
 ul {
-  padding-left: 0px;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
