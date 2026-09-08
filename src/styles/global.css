@@ -171,8 +171,14 @@ button {
 }
 .h2 em {
   font-style: normal;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.07);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+/* Unbounded's Cyrillic is much heavier than Syne's Latin: a 1px stroke closes up
+   the counters, so thin it out and lean on the fill instead. */
+:root:lang(uk) .h2 em {
+  color: rgba(255, 255, 255, 0.13);
+  -webkit-text-stroke-width: 0.7px;
 }
 
 .lead {

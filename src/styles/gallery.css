@@ -84,7 +84,8 @@ main,
 }
 .gallery {
   position: relative;
-  height: 420vh; /* overridden inline per card count */
+  /* height is set inline from the measured track width; this is only a pre-hydration guess */
+  height: 300vh;
 }
 .gallery-sticky {
   position: sticky;
@@ -98,7 +99,7 @@ main,
   display: flex;
   gap: clamp(16px, 2.2vw, 32px);
   padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
-  padding-right: 8vw;
+  padding-right: max(var(--gutter), calc((100vw - var(--container)) / 2));
   will-change: transform;
 }
 .gcard {

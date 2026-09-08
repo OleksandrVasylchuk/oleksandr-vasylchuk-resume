@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { useI18n } from "../i18n";
 import { Reveal } from "../lib/Reveal";
@@ -19,10 +19,43 @@ function slug(url: string) {
 export function Projects() {
   const { t, resume } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const { featuredProjects, additionalProjects } = resume;
+
+  // How far the track actually has to travel: its full width minus one viewport.
+  // Driving the transform in pixels (not %) keeps the last card flush with the right
+  // edge at the end of the scroll instead of sliding the whole track off-screen.
+  const [travel, setTravel] = useState(0);
+  const measure = () => {
+    const track = trackRef.current;
+    if (!track) return;
+    setTravel(Math.max(0, track.scrollWidth - track.parentElement!.clientWidth));
+  };
+  useLayoutEffect(measure, [featuredProjects.length]);
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const ro = new ResizeObserver(measure);
+    ro.observe(track);
+    ro.observe(document.documentElement);
+    window.addEventListener("resize", measure);
+    // images arrive late and change scrollWidth
+    const imgs = Array.from(track.querySelectorAll("img"));
+    imgs.forEach((img) => img.addEventListener("load", measure));
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+      imgs.forEach((img) => img.removeEventListener("load", measure));
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [featuredProjects.length]);
+
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const x = useSpring(useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]), { stiffness: 90, damping: 26, mass: 0.6 });
+  const x = useSpring(useTransform(scrollYProgress, [0, 1], [0, -travel]), { stiffness: 90, damping: 26, mass: 0.6 });
+  // Scroll a bit less than the track travels (1.35x speed) so the section does not
+  // eat eight screens of scrolling before the page continues.
+  const SCROLL_RATIO = 0.74;
   const totalLinks = resume.experience.reduce((n, j) => n + j.projects.length, 0) + additionalProjects.projects.length;
   const [a, b] = t.work.title;
 
@@ -54,9 +87,9 @@ export function Projects() {
         </div>
       </div>
 
-      <div className={`gallery ${reduce ? "is-static" : ""}`} ref={ref} style={{ height: `${(featuredProjects.length + 1) * 42}vh` }}>
+      <div className={`gallery ${reduce ? "is-static" : ""}`} ref={ref} style={reduce ? undefined : { height: `calc(100vh + ${Math.round(travel * SCROLL_RATIO)}px)` }}>
         <div className="gallery-sticky">
-          <motion.div className="gallery-track" style={reduce ? undefined : { x }}>
+          <motion.div className="gallery-track" ref={trackRef} style={reduce ? undefined : { x }}>
             {featuredProjects.map((p, i) => (
               <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="gcard" data-cursor="Open" aria-label={`${p.name} — ${t.work.open}`}>
                 <div className="gcard-media">
