@@ -16,6 +16,7 @@ import { Stack } from "./components/Stack";
 import { Playground } from "./components/Playground";
 import { Education } from "./components/Education";
 import { Contact, Footer } from "./components/Contact";
+import { BackToTop } from "./components/BackToTop";
 
 export default function App() {
   useLenis();
@@ -54,6 +55,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
       <Noise />
     </>
   );

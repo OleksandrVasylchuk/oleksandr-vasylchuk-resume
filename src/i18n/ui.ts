@@ -1,7 +1,7 @@
 export type Lang = "en" | "uk";
 
 const en = {
-  nav: { about: "About", experience: "Experience", work: "Work", stack: "Stack", play: "Play", contact: "Contact", cv: "Download CV", cvFull: "Download CV (PDF)", palette: "Open command palette", menuOpen: "Open menu", menuClose: "Close menu", lang: "Українська" },
+  nav: { about: "About", experience: "Experience", work: "Work", stack: "Stack", play: "Play", contact: "Contact", cv: "Download CV", cvFull: "Download CV (PDF)", palette: "Open command palette", menuOpen: "Open menu", menuClose: "Close menu", lang: "Українська", toTop: "Back to top" },
   hero: {
     playCta: "Recruiter? Play a game",
     currently: "Currently",
@@ -130,7 +130,7 @@ const en = {
 export type UI = typeof en;
 
 const uk: UI = {
-  nav: { about: "Про мене", experience: "Досвід", work: "Роботи", stack: "Стек", play: "Гра", contact: "Контакти", cv: "Завантажити CV", cvFull: "Завантажити CV (PDF)", palette: "Відкрити командну палітру", menuOpen: "Відкрити меню", menuClose: "Закрити меню", lang: "English" },
+  nav: { about: "Про мене", experience: "Досвід", work: "Роботи", stack: "Стек", play: "Гра", contact: "Контакти", cv: "Завантажити CV", cvFull: "Завантажити CV (PDF)", palette: "Відкрити командну палітру", menuOpen: "Відкрити меню", menuClose: "Закрити меню", lang: "English", toTop: "Нагору" },
   hero: {
     playCta: "Рекрутер? Зіграй у гру",
     currently: "Зараз",

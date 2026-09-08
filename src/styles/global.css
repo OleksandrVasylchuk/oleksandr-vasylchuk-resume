@@ -52,8 +52,11 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* `clip`, not `hidden`: overflow-x:hidden turns the element into a scroll
+   container, which silently breaks every position:sticky descendant
+   (the pinned work gallery). `clip` contains overflow without that side effect. */
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -66,7 +69,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
 }
 
