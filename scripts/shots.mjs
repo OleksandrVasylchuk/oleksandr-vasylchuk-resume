@@ -11,9 +11,13 @@ import puppeteer from "puppeteer-core";
 
 import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "public/projects");
+const args = process.argv.slice(2);
+const ALL = args.includes("--all");
+const outArg = args.find((a) => a.startsWith("--out="));
+const only = args.filter((a) => !a.startsWith("--"));
+const OUT = outArg ? path.resolve(outArg.slice(6)) : path.join(ROOT, "public/projects");
+fs.mkdirSync(OUT, { recursive: true });
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/resume.json"), "utf8"));
-const only = process.argv.slice(2);
 const SHOT_URL = {};
 
 const slug = (url) =>
@@ -109,15 +113,20 @@ const browser = await puppeteer.launch({
   args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars", "--lang=en-US,en"],
 });
 
-for (const p of data.featuredProjects) {
+const list = ALL
+  ? [...new Map([...data.experience.flatMap((j) => j.projects), ...data.additionalProjects.projects].filter((p) => !p.url.includes("ewp.live")).map((p) => [p.url, p])).values()]
+  : data.featuredProjects;
+for (const p of list) {
   const s = slug(p.url);
   if (only.length && !only.includes(s)) continue;
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1.5 });
   await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36");
   await page.setExtraHTTPHeaders({ "Accept-Language": "en-US,en;q=0.9,uk;q=0.8" });
+  const hardTimeout = new Promise((_, rej) => setTimeout(() => rej(new Error("hard timeout 90s")), 90000));
   try {
     const target = SHOT_URL[s] || p.url;
+    await Promise.race([hardTimeout, (async () => {
     await page.goto(target, { waitUntil: "networkidle2", timeout: 60000 }).catch(() => page.goto(target, { waitUntil: "domcontentloaded", timeout: 60000 }));
     await new Promise((r) => setTimeout(r, 2500));
     // nudge lazy / scroll-triggered content, then return to top
@@ -138,10 +147,11 @@ for (const p of data.featuredProjects) {
     await page.screenshot({ path: file, type: "jpeg", quality: 84, clip: { x: 0, y: 0, width: 1440, height: 810 } });
     const kb = Math.round(fs.statSync(file).size / 1024);
     console.log(`✔ ${s}  ${kb} KB  (${await page.title()})`);
+    })()]);
   } catch (e) {
     console.log(`✖ ${s}: ${e.message}`);
   } finally {
-    await page.close();
+    await page.close().catch(() => {});
   }
 }
 await browser.close();

@@ -183,10 +183,6 @@
           "url": "https://imaginemagazine.co/"
         },
         {
-          "name": "Hashira Labs",
-          "url": "https://staging-105f5b6.ingress-bonde.ewp.live/"
-        },
-        {
           "name": "WonderMath",
           "url": "https://www.wondermath.com/"
         }
@@ -266,10 +262,6 @@
           "url": "https://lacto-cure.ua/"
         },
         {
-          "name": "Paradise Caps",
-          "url": "https://paradisecaps.com/"
-        },
-        {
           "name": "Touch Spa",
           "url": "https://www.touchspa.com.ua/"
         }
@@ -346,10 +338,6 @@
         {
           "name": "EIN-DES-EIN",
           "url": "https://ein-des-ein.com/"
-        },
-        {
-          "name": "Bosphor Tour",
-          "url": "https://bosphortour.uz/"
         }
       ]
     },
@@ -379,8 +367,8 @@
       ],
       "projects": [
         {
-          "name": "Slotogate",
-          "url": "https://slotogate.com/"
+          "name": "Casinotics (ex-Slotogate)",
+          "url": "https://casinotics.com/"
         }
       ]
     },
@@ -469,22 +457,9 @@
   },
   "featuredProjects": [
     {
-      "name": "EZ Kratom",
-      "url": "https://ezkratom.com/",
-      "type": "E-commerce",
-      "company": "Qwerty-Soft",
-      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
-      "stack": [
-        "WooCommerce",
-        "PHP",
-        "REST API",
-        "CI/CD"
-      ]
-    },
-    {
       "name": "Cobble London",
       "url": "https://cobble.london/",
-      "type": "Client platform",
+      "type": "Audio-walks platform",
       "company": "Qwerty-Soft",
       "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
       "stack": [
@@ -492,6 +467,18 @@
         "Custom Plugins",
         "ACF",
         "JavaScript"
+      ]
+    },
+    {
+      "name": "Sunny Nails",
+      "url": "https://sunnynails.sg/",
+      "type": "Beauty salon",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WordPress",
+        "WooCommerce",
+        "API Integration"
       ]
     },
     {
@@ -508,28 +495,42 @@
       ]
     },
     {
-      "name": "Sunny Nails",
-      "url": "https://sunnynails.sg/",
-      "type": "Service business",
+      "name": "EZ Kratom",
+      "url": "https://ezkratom.com/",
+      "type": "E-commerce",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WooCommerce",
+        "PHP",
+        "REST API",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Qwerty-Soft",
+      "url": "https://qwerty-soft.com/",
+      "type": "Agency website",
       "company": "Qwerty-Soft",
       "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
       "stack": [
         "WordPress",
-        "WooCommerce",
-        "API Integration"
+        "ACF",
+        "JavaScript",
+        "CI/CD"
       ]
     },
     {
-      "name": "SEOMATICA",
-      "url": "https://seomatica.io/",
-      "type": "Corporate",
-      "company": "SEOMATICA",
-      "description": "Corporate / marketing site with a custom ACF-based page builder, JavaScript-driven UI and pixel-perfect Figma-to-code implementation.",
+      "name": "Multiverse Media",
+      "url": "https://multiverse.media/",
+      "type": "Media brand",
+      "company": "Smart Pipl",
+      "description": "Corporate / SaaS marketing site for an international client: third-party API integrations, custom Elementor widgets and multilingual ACF content structures.",
       "stack": [
-        "ACF Flexible Content",
-        "PHP",
-        "SASS",
-        "jQuery"
+        "WordPress",
+        "Elementor",
+        "ACF",
+        "SASS"
       ]
     },
     {
@@ -546,16 +547,29 @@
       ]
     },
     {
-      "name": "Slotogate",
-      "url": "https://slotogate.com/",
-      "type": "Multilingual portal",
-      "company": "TRIONIKA",
-      "description": "Responsive WordPress templates from Figma with Lighthouse optimization, custom post types, taxonomies and a WPML multilingual structure.",
+      "name": "ein-des-ein",
+      "url": "https://ein-des-ein.com/",
+      "type": "Software agency",
+      "company": "EIN-DES-EIN",
+      "description": "Agency site built with PUG templating, strict BEM methodology and custom plugin development; component-based workflow set up for the team.",
       "stack": [
         "WordPress",
-        "WPML",
-        "ACF",
-        "Lighthouse"
+        "PUG",
+        "BEM",
+        "Custom Plugins"
+      ]
+    },
+    {
+      "name": "Crystal Professional",
+      "url": "https://crystal-professional.eu/",
+      "type": "Cosmetics e-shop",
+      "company": "SEOMATICA",
+      "description": "Corporate / e-commerce site with a custom ACF-based page builder, JavaScript-driven UI and pixel-perfect Figma-to-code implementation.",
+      "stack": [
+        "WordPress",
+        "ACF Flexible Content",
+        "PHP",
+        "jQuery"
       ]
     },
     {

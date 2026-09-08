@@ -361,8 +361,22 @@
   position: sticky;
   top: 110px;
 }
+@media (max-width: 959px) {
+  .about-photo-wrap {
+    position: static;
+  }
+  .about-photo {
+    aspect-ratio: 3 / 2;
+    max-width: 100%;
+  }
+  .about-photo img {
+    object-position: center 22%;
+  }
+}
 .about-photo {
   position: relative;
+  max-width: 420px;
+  margin-inline: auto;
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--line-strong);
@@ -573,6 +587,8 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  padding: 6px 0;
+  min-height: 32px;
 }
 .timeline-company a:hover {
   text-decoration: underline;
@@ -581,7 +597,7 @@
 .timeline-index {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 40px;
+  font-size: clamp(28px, 8vw, 40px);
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--line-strong);
@@ -968,8 +984,11 @@
   overflow: hidden;
 }
 .contact-glow {
+  max-width: 100vw;
+}
+.contact-glow {
   position: absolute;
-  inset: auto -20% -40% -20%;
+  inset: auto 0 -40% 0;
   height: 80%;
   background: radial-gradient(50% 60% at 50% 100%, rgba(200, 255, 77, 0.14), rgba(124, 108, 255, 0.08) 45%, transparent 75%);
   pointer-events: none;

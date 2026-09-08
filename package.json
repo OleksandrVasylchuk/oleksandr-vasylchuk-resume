@@ -33,10 +33,11 @@
     "dev": "vite",
     "start": "vite",
     "resume:pdf": "node scripts/generate-resume.mjs",
-    "prebuild": "npm run resume:pdf",
+    "prebuild": "npm run resume:pdf && npm run og",
     "build": "tsc -b && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
-    "shots": "node scripts/shots.mjs"
+    "shots": "node scripts/shots.mjs",
+    "og": "node scripts/generate-og.mjs"
   }
 }

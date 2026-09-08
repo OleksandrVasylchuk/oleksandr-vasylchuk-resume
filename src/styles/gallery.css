@@ -25,6 +25,12 @@ main,
 .section {
   background: transparent;
 }
+@media (max-width: 899px) {
+  /* the backdrop sits right behind body text on phones: give sections a scrim */
+  main {
+    background: linear-gradient(180deg, transparent, rgba(7, 8, 12, 0.82) 6%, rgba(7, 8, 12, 0.82) 94%, transparent);
+  }
+}
 /* fade content sections' surfaces slightly so particles stay visible behind cards */
 .card,
 .stat,
@@ -78,7 +84,7 @@ main,
 }
 .gallery {
   position: relative;
-  height: 380vh;
+  height: 420vh; /* overridden inline per card count */
 }
 .gallery-sticky {
   position: sticky;
@@ -285,7 +291,7 @@ main,
 /* static fallback: narrow screens + reduced motion */
 @media (max-width: 899px) {
   .gallery {
-    height: auto;
+    height: auto !important;
   }
   .gallery-sticky {
     position: static;
@@ -306,7 +312,7 @@ main,
   }
 }
 .gallery.is-static {
-  height: auto;
+  height: auto !important;
 }
 .gallery.is-static .gallery-sticky {
   position: static;

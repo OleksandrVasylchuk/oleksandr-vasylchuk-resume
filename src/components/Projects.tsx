@@ -54,7 +54,7 @@ export function Projects() {
         </div>
       </div>
 
-      <div className={`gallery ${reduce ? "is-static" : ""}`} ref={ref}>
+      <div className={`gallery ${reduce ? "is-static" : ""}`} ref={ref} style={{ height: `${(featuredProjects.length + 1) * 42}vh` }}>
         <div className="gallery-sticky">
           <motion.div className="gallery-track" style={reduce ? undefined : { x }}>
             {featuredProjects.map((p, i) => (

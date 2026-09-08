@@ -287,8 +287,23 @@ html.has-cursor textarea {
     radial-gradient(80% 60% at 50% 100%, rgba(200, 255, 77, 0.07), transparent 70%),
     var(--bg-2);
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 300px;
+}
+@media (max-width: 700px) {
+  /* keep it playable on phones without letting aspect-ratio inflate the width */
+  .play-stage {
+    aspect-ratio: auto;
+    height: 62vw;
+    min-height: 240px;
+  }
+  .play-overlay h3 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+  .play-overlay p {
+    font-size: 13px;
+  }
 }
 .play-canvas {
   width: 100%;
@@ -401,6 +416,16 @@ html.has-cursor textarea {
 .brief-actions .btn {
   padding: 12px 18px;
   font-size: 14px;
+}
+@media (max-width: 420px) {
+  .brief-actions .btn,
+  .play-overlay .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .play-hud {
+    font-size: 10.5px;
+  }
 }
 
 /* language toggle */

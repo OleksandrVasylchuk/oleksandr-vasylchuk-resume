@@ -242,7 +242,9 @@ function Particles() {
     const wide = rs.size.width > 900;
     const targetX = p < 0.06 && wide ? 1.3 : 0;
     s.x = THREE.MathUtils.damp(s.x, targetX, 2, delta);
-    const targetDim = p < 0.06 ? 1 : 0.42;
+    // phones/tablets: the backdrop sits directly behind body copy, so keep it faint
+    const small = rs.size.width < 900;
+    const targetDim = small ? (p < 0.06 ? 0.55 : 0.16) : p < 0.06 ? 1 : 0.42;
     s.dim = THREE.MathUtils.damp(s.dim, targetDim, 2, delta);
     u.uDim.value = s.dim;
 
