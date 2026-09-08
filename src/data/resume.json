@@ -1,0 +1,605 @@
+{
+  "name": "Oleksandr Vasylchuk",
+  "firstName": "Oleksandr",
+  "lastName": "Vasylchuk",
+  "title": "Senior Full-Stack WordPress Developer · Tech Lead",
+  "shortTitle": "Senior Full-Stack Developer & Tech Lead",
+  "location": "Ukraine · Remote worldwide",
+  "availability": "Open to Senior / Tech Lead roles",
+  "siteUrl": "https://oleksandr-vasylchuk.vercel.app",
+  "cvFile": "Oleksandr_Vasylchuk_CV.pdf",
+  "summary": "Senior Full-Stack WordPress Developer with 5+ years delivering production-grade solutions for international clients. Deep expertise in custom plugin development with complex backend logic and third-party API integrations, Git-based CI/CD pipelines for staging and production, and full-cycle ownership from Figma to deployment. Currently Tech Lead at Qwerty-Soft, driving architecture decisions, code reviews and team management across concurrent outsourced projects.",
+  "heroLine": "I architect and ship WordPress & WooCommerce platforms that hold up in production — custom plugins, API integrations, CI/CD, and teams that deliver.",
+  "contacts": {
+    "phone": "+380990241220",
+    "phoneDisplay": "+380 99 024 12 20",
+    "email": "sanyabatyushka@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/oleksandr-vasylchuk",
+    "linkedinHandle": "in/oleksandr-vasylchuk",
+    "github": "https://github.com/OleksandrVasylchuk",
+    "githubHandle": "@OleksandrVasylchuk",
+    "telegram": ""
+  },
+  "stats": [
+    {
+      "value": 5,
+      "suffix": "+",
+      "label": "Years in production"
+    },
+    {
+      "value": 30,
+      "suffix": "+",
+      "label": "Projects shipped"
+    },
+    {
+      "value": 8,
+      "suffix": "",
+      "label": "Companies & agencies"
+    },
+    {
+      "value": 100,
+      "suffix": "%",
+      "label": "Figma-to-deploy ownership"
+    }
+  ],
+  "highlights": [
+    "Senior / Tech Lead",
+    "5+ Years Experience",
+    "CI/CD & DevOps",
+    "Custom Plugin Development",
+    "API Integrations",
+    "Open to Senior Roles"
+  ],
+  "skillGroups": [
+    {
+      "name": "Backend & WordPress",
+      "skills": [
+        "PHP",
+        "WordPress",
+        "WooCommerce",
+        "Custom Plugins",
+        "ACF / Flexible Content",
+        "Gutenberg Blocks",
+        "REST API",
+        "Timber / Twig",
+        "Elementor",
+        "WPML",
+        "WP-CLI",
+        "Composer",
+        "MySQL",
+        "Laravel"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        "JavaScript ES6+",
+        "TypeScript",
+        "React",
+        "HTML5",
+        "CSS3 / SASS",
+        "BEM",
+        "AJAX",
+        "jQuery",
+        "PUG",
+        "Webpack",
+        "Vite"
+      ]
+    },
+    {
+      "name": "DevOps & Tooling",
+      "skills": [
+        "Git",
+        "CI/CD Pipelines",
+        "Docker",
+        "Linux / SSH",
+        "Nginx",
+        "Staging & Production Deploys",
+        "Core Web Vitals",
+        "Technical SEO"
+      ]
+    },
+    {
+      "name": "Leadership",
+      "skills": [
+        "Team Leadership & Mentoring",
+        "Technical Architecture",
+        "Code Review",
+        "Task Delegation",
+        "Agile / Scrum",
+        "Client Communication",
+        "Figma Handoff"
+      ]
+    }
+  ],
+  "marquee": [
+    "PHP",
+    "WordPress",
+    "WooCommerce",
+    "Custom Plugins",
+    "REST API",
+    "React",
+    "TypeScript",
+    "ACF",
+    "Gutenberg",
+    "Docker",
+    "CI/CD",
+    "Nginx",
+    "MySQL",
+    "Timber / Twig",
+    "Webpack",
+    "Vite",
+    "Figma",
+    "Elementor",
+    "WPML",
+    "Core Web Vitals"
+  ],
+  "experience": [
+    {
+      "role": "Tech Lead · Full-Stack WordPress Developer",
+      "company": "Qwerty-Soft",
+      "companyUrl": "https://qwerty-soft.com/",
+      "start": "2024-08",
+      "end": null,
+      "period": "Aug 2024 — Present",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "WooCommerce",
+        "ACF",
+        "REST API",
+        "JavaScript",
+        "React",
+        "Docker",
+        "Git",
+        "CI/CD"
+      ],
+      "bullets": [
+        "Architect and deliver outsourced products: WooCommerce stores, booking platforms with member dashboards, and API-driven services.",
+        "Build complex custom plugins with heavy backend logic and third-party API integrations (payment gateways, CRMs, external data feeds).",
+        "Set up Git-based CI/CD pipelines for automated staging and production deployments.",
+        "Define tech stack, conduct code reviews, break down tasks and mentor junior developers across multiple concurrent projects."
+      ],
+      "projects": [
+        {
+          "name": "Qwerty-Soft",
+          "url": "https://qwerty-soft.com/"
+        },
+        {
+          "name": "EZ Kratom",
+          "url": "https://ezkratom.com/"
+        },
+        {
+          "name": "Cobble London",
+          "url": "https://cobble.london/"
+        },
+        {
+          "name": "Sunny Nails",
+          "url": "https://sunnynails.sg/"
+        },
+        {
+          "name": "Imagine Magazine",
+          "url": "https://imaginemagazine.co/"
+        },
+        {
+          "name": "Hashira Labs",
+          "url": "https://staging-105f5b6.ingress-bonde.ewp.live/"
+        },
+        {
+          "name": "WonderMath",
+          "url": "https://www.wondermath.com/"
+        }
+      ]
+    },
+    {
+      "role": "Middle Full-Stack WordPress Developer",
+      "company": "SEOMATICA",
+      "companyUrl": "https://seomatica.io/",
+      "start": "2023-11",
+      "end": "2024-08",
+      "period": "Nov 2023 — Aug 2024",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "BEM",
+        "PHP",
+        "JS",
+        "jQuery",
+        "AJAX",
+        "WordPress",
+        "ACF / Flexible Content"
+      ],
+      "bullets": [
+        "Built corporate and marketing WordPress sites with custom ACF-based page builders and JavaScript-driven UI interactions.",
+        "Pixel-perfect Figma-to-code implementation with cross-browser compatibility and performance standards."
+      ],
+      "projects": [
+        {
+          "name": "SEOMATICA",
+          "url": "https://seomatica.io/"
+        },
+        {
+          "name": "Migrant Go",
+          "url": "https://migrantgo.eu/"
+        },
+        {
+          "name": "FitCake Ursynów",
+          "url": "https://fitcakeursynow.com/"
+        },
+        {
+          "name": "Crystal Professional",
+          "url": "https://crystal-professional.eu/"
+        }
+      ]
+    },
+    {
+      "role": "Middle Full-Stack WordPress Developer (part-time)",
+      "company": "DevOut Labs · SEOTM",
+      "companyUrl": null,
+      "start": "2024-02",
+      "end": "2024-06",
+      "period": "Feb 2024 — Jun 2024",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "BEM",
+        "PHP",
+        "JS",
+        "jQuery",
+        "WordPress",
+        "ACF",
+        "Flexible Content",
+        "Webpack"
+      ],
+      "bullets": [
+        "Concurrent part-time role alongside SEOMATICA. Developed custom WordPress themes for two agencies.",
+        "Implemented ACF Flexible Content layouts, Webpack build pipelines and responsive interfaces from Figma designs."
+      ],
+      "projects": [
+        {
+          "name": "Lacto-Cure",
+          "url": "https://lacto-cure.ua/"
+        },
+        {
+          "name": "Paradise Caps",
+          "url": "https://paradisecaps.com/"
+        },
+        {
+          "name": "Touch Spa",
+          "url": "https://www.touchspa.com.ua/"
+        }
+      ]
+    },
+    {
+      "role": "Full-Stack WordPress Developer",
+      "company": "Smart Pipl",
+      "companyUrl": null,
+      "start": "2023-02",
+      "end": "2023-11",
+      "period": "Feb 2023 — Nov 2023",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "PHP",
+        "JS",
+        "jQuery",
+        "AJAX",
+        "WordPress",
+        "ACF",
+        "Elementor"
+      ],
+      "bullets": [
+        "Delivered corporate and SaaS marketing sites for international clients.",
+        "Integrated third-party APIs, built custom Elementor widgets and ACF-driven content structures with multilingual support."
+      ],
+      "projects": [
+        {
+          "name": "Stirnweiss Brenner",
+          "url": "https://stirnweiss-brenner.de/"
+        },
+        {
+          "name": "AI Superior",
+          "url": "https://aisuperior.com/"
+        },
+        {
+          "name": "ScaleOps",
+          "url": "https://scaleops.com/"
+        },
+        {
+          "name": "Multiverse Media",
+          "url": "https://multiverse.media/"
+        }
+      ]
+    },
+    {
+      "role": "Full-Stack WordPress Developer",
+      "company": "EIN-DES-EIN",
+      "companyUrl": "https://ein-des-ein.com/",
+      "start": "2022-10",
+      "end": "2023-02",
+      "period": "Oct 2022 — Feb 2023",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "BEM",
+        "PHP",
+        "JS",
+        "jQuery",
+        "WordPress",
+        "ACF",
+        "PUG"
+      ],
+      "bullets": [
+        "Built WordPress promotional sites for mobile apps using PUG templating, strict BEM methodology and custom plugin development.",
+        "Established component-based workflow and code style standards within the team."
+      ],
+      "projects": [
+        {
+          "name": "EIN-DES-EIN",
+          "url": "https://ein-des-ein.com/"
+        },
+        {
+          "name": "Bosphor Tour",
+          "url": "https://bosphortour.uz/"
+        }
+      ]
+    },
+    {
+      "role": "Full-Stack WordPress Developer",
+      "company": "TRIONIKA",
+      "companyUrl": null,
+      "start": "2022-02",
+      "end": "2022-10",
+      "period": "Feb 2022 — Oct 2022",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "BEM",
+        "PHP",
+        "JS",
+        "jQuery",
+        "WordPress",
+        "ACF",
+        "WPML"
+      ],
+      "bullets": [
+        "Built responsive WordPress templates from Figma layouts with Google Lighthouse score optimization.",
+        "Developed custom post types, taxonomies, WPML-based multilingual structure and ACF field groups."
+      ],
+      "projects": [
+        {
+          "name": "Slotogate",
+          "url": "https://slotogate.com/"
+        }
+      ]
+    },
+    {
+      "role": "Full-Stack Developer",
+      "company": "ASIA GROUP",
+      "companyUrl": null,
+      "start": "2021-11",
+      "end": "2022-02",
+      "period": "Nov 2021 — Feb 2022",
+      "location": "Ukraine",
+      "stack": [
+        "Laravel",
+        "WordPress",
+        "PHP",
+        "JS"
+      ],
+      "bullets": [
+        "Maintained and extended Laravel and WordPress projects: new feature pages, content updates, bug fixes and performance improvements across multiple live client sites."
+      ],
+      "projects": []
+    },
+    {
+      "role": "SEO Full-Stack Developer",
+      "company": "Semalt",
+      "companyUrl": null,
+      "start": "2021-06",
+      "end": "2021-11",
+      "period": "Jun 2021 — Nov 2021",
+      "location": "Ukraine",
+      "stack": [
+        "Technical SEO",
+        "Core Web Vitals",
+        "Docker",
+        "MySQL",
+        "CMS"
+      ],
+      "bullets": [
+        "Performed technical SEO audits and Core Web Vitals optimizations for client sites.",
+        "Resolved crawl errors, improved LCP/CLS scores, customized CMS structures, managed Docker environments and MySQL databases."
+      ],
+      "projects": []
+    }
+  ],
+  "additionalProjects": {
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "SASS",
+      "PHP",
+      "JS",
+      "jQuery",
+      "AJAX",
+      "WordPress",
+      "ACF",
+      "Flexible Content",
+      "Elementor"
+    ],
+    "description": "E-commerce and custom WordPress projects for businesses and individual clients. Responsive interfaces, advanced ACF, dynamic content management.",
+    "projects": [
+      {
+        "name": "Green Gaia",
+        "url": "https://www.greengaia.com.ua/"
+      },
+      {
+        "name": "Mudri Rishennya",
+        "url": "https://www.mudririshennya.com/"
+      },
+      {
+        "name": "Eiwa Gracia",
+        "url": "https://eiwa-gracia.com/en/"
+      },
+      {
+        "name": "Ikra Lemberg",
+        "url": "https://www.ikra-lemberg.in.ua/"
+      },
+      {
+        "name": "Lemberg Ikra UA",
+        "url": "https://www.lemberg-ikra.com.ua/"
+      },
+      {
+        "name": "Lemberg Ikra",
+        "url": "https://lemberg-ikra.com/"
+      }
+    ]
+  },
+  "featuredProjects": [
+    {
+      "name": "EZ Kratom",
+      "url": "https://ezkratom.com/",
+      "type": "E-commerce",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WooCommerce",
+        "PHP",
+        "REST API",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Cobble London",
+      "url": "https://cobble.london/",
+      "type": "Client platform",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WordPress",
+        "Custom Plugins",
+        "ACF",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "WonderMath",
+      "url": "https://www.wondermath.com/",
+      "type": "EdTech",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WordPress",
+        "ACF",
+        "React",
+        "Core Web Vitals"
+      ]
+    },
+    {
+      "name": "Sunny Nails",
+      "url": "https://sunnynails.sg/",
+      "type": "Service business",
+      "company": "Qwerty-Soft",
+      "description": "Outsourced product delivered under my tech leadership: architecture, custom plugins with backend logic, third-party API integrations and Git-based CI/CD to staging and production.",
+      "stack": [
+        "WordPress",
+        "WooCommerce",
+        "API Integration"
+      ]
+    },
+    {
+      "name": "SEOMATICA",
+      "url": "https://seomatica.io/",
+      "type": "Corporate",
+      "company": "SEOMATICA",
+      "description": "Corporate / marketing site with a custom ACF-based page builder, JavaScript-driven UI and pixel-perfect Figma-to-code implementation.",
+      "stack": [
+        "ACF Flexible Content",
+        "PHP",
+        "SASS",
+        "jQuery"
+      ]
+    },
+    {
+      "name": "ScaleOps",
+      "url": "https://scaleops.com/",
+      "type": "SaaS marketing",
+      "company": "Smart Pipl",
+      "description": "Corporate / SaaS marketing site for an international client: third-party API integrations, custom Elementor widgets and multilingual ACF content structures.",
+      "stack": [
+        "WordPress",
+        "Elementor",
+        "ACF",
+        "AJAX"
+      ]
+    },
+    {
+      "name": "Slotogate",
+      "url": "https://slotogate.com/",
+      "type": "Multilingual portal",
+      "company": "TRIONIKA",
+      "description": "Responsive WordPress templates from Figma with Lighthouse optimization, custom post types, taxonomies and a WPML multilingual structure.",
+      "stack": [
+        "WordPress",
+        "WPML",
+        "ACF",
+        "Lighthouse"
+      ]
+    },
+    {
+      "name": "Lacto-Cure",
+      "url": "https://lacto-cure.ua/",
+      "type": "Brand site",
+      "company": "DevOut Labs",
+      "description": "Custom WordPress theme with ACF Flexible Content layouts, a Webpack build pipeline and responsive interfaces from Figma.",
+      "stack": [
+        "WordPress",
+        "ACF",
+        "Webpack",
+        "SASS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "GoIT Academy",
+      "degree": "Full-Stack Developer",
+      "period": "2020 — 2021",
+      "location": "Ukraine"
+    },
+    {
+      "school": "National Pedagogical Dragomanov University",
+      "degree": "Master's Degree — Practical Psychologist, Valeologist, Physical Rehabilitation Specialist",
+      "period": "2015 — 2020",
+      "location": "Ukraine"
+    },
+    {
+      "school": "Nizhyn Medical College",
+      "degree": "Junior Specialist — Emergency Medical Technician (Paramedic)",
+      "period": "2012 — 2015",
+      "location": "Ukraine"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Ukrainian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Intermediate (B1+)"
+    }
+  ]
+}
