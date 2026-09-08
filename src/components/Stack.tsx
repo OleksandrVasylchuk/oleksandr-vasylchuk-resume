@@ -1,23 +1,29 @@
-import { resume } from "../data/resume";
+import { useI18n } from "../i18n";
 import { Reveal, Stagger, StaggerItem } from "../lib/Reveal";
+import { Scramble } from "../lib/Scramble";
 
 export function Stack() {
+  const { t, resume } = useI18n();
+  const [a, b] = t.stack.title;
   return (
     <section className="section stack" id="stack">
       <div className="container">
         <div className="section-head">
           <div>
             <Reveal>
-              <span className="eyebrow">Tech stack</span>
+              <span className="eyebrow">
+                <Scramble text={t.stack.eyebrow} />
+              </span>
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="h2">
-                Tools I reach for <em>every week.</em>
+                {a}
+                <em>{b}</em>
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <p className="lead">Backend-first WordPress engineering with a modern JavaScript layer, containerised environments and automated deployments.</p>
+            <p className="lead">{t.stack.lead}</p>
           </Reveal>
         </div>
 

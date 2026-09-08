@@ -321,9 +321,9 @@ export class Runner {
   }
 }
 
-export function tierFor(score: number) {
-  if (score < 300) return { title: "Intern deploy", note: "The site went down. Happens to everyone on a Friday." };
-  if (score < 800) return { title: "Middle deploy", note: "Survived the sprint. Some hotfixes required." };
-  if (score < 1500) return { title: "Senior deploy", note: "Zero-downtime. Clients didn't even notice." };
-  return { title: "Tech Lead material", note: "You clearly know your way around production. Let's talk." };
+export function tierIndex(score: number) {
+  if (score < 300) return 0;
+  if (score < 800) return 1;
+  if (score < 1500) return 2;
+  return 3;
 }

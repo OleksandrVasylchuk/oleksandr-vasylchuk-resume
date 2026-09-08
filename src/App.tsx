@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { scrollToHash, useLenis } from "./lib/useLenis";
+
+const Backdrop = lazy(() => import("./components/Backdrop").then((m) => ({ default: m.Backdrop })));
 import { CursorGlow, Noise, ScrollProgress } from "./lib/Effects";
 import { Cursor } from "./lib/Cursor";
 import { Preloader, usePreloader } from "./components/Preloader";
@@ -32,6 +34,9 @@ export default function App() {
   return (
     <>
       <Preloader done={done} onFinish={finish} />
+      <Suspense fallback={null}>
+        <Backdrop />
+      </Suspense>
       <ScrollProgress />
       <CursorGlow />
       <Cursor />

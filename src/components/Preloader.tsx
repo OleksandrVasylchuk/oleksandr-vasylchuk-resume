@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { useI18n } from "../i18n";
 
 const KEY = "ov-preloaded";
 
@@ -27,6 +28,7 @@ export function usePreloader() {
 }
 
 export function Preloader({ done, onFinish }: { done: boolean; onFinish: () => void }) {
+  const { t } = useI18n();
   const [n, setN] = useState(0);
 
   useEffect(() => {
@@ -72,7 +74,7 @@ export function Preloader({ done, onFinish }: { done: boolean; onFinish: () => v
             <div className="preloader-bar">
               <span style={{ transform: `scaleX(${n / 100})` }} />
             </div>
-            <div className="preloader-hint">booting portfolio · webgl · fonts</div>
+            <div className="preloader-hint">{t.preloader}</div>
           </div>
         </motion.div>
       )}

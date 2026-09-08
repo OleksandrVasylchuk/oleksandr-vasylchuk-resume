@@ -1,0 +1,315 @@
+/* =========================================================
+   GLOBAL WEBGL BACKDROP
+   ========================================================= */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.backdrop canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* content sits above the backdrop */
+.nav,
+main,
+.footer,
+.marquee {
+  position: relative;
+  z-index: 1;
+}
+.hero {
+  background: transparent;
+}
+.section {
+  background: transparent;
+}
+/* fade content sections' surfaces slightly so particles stay visible behind cards */
+.card,
+.stat,
+.lang-list li,
+.contact-links a,
+.projects-more {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* =========================================================
+   LIVE STATS (about)
+   ========================================================= */
+.live {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.live-item {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--line-strong);
+  font-family: var(--font-mono);
+}
+.live-item span {
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.live-item strong {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.live-item em {
+  font-style: normal;
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+/* =========================================================
+   HORIZONTAL GALLERY (selected work)
+   ========================================================= */
+.projects {
+  padding-top: clamp(88px, 12vw, 160px);
+}
+.gallery {
+  position: relative;
+  height: 380vh;
+}
+.gallery-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.gallery-track {
+  display: flex;
+  gap: clamp(16px, 2.2vw, 32px);
+  padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  padding-right: 8vw;
+  will-change: transform;
+}
+.gcard {
+  position: relative;
+  flex: none;
+  width: clamp(300px, 52vw, 720px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 24px;
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(180deg, rgba(20, 22, 30, 0.9), rgba(10, 12, 18, 0.92));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 0.6s var(--ease),
+    border-color 0.4s var(--ease);
+}
+.gcard:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px);
+}
+.gcard-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+}
+.gcard-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.85) contrast(1.02);
+  transform: scale(1.02);
+  transition:
+    transform 1.2s var(--ease),
+    filter 0.6s var(--ease);
+}
+.gcard:hover .gcard-media img {
+  transform: scale(1.08);
+  filter: saturate(1.05) contrast(1.03);
+}
+.gcard-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 8, 12, 0.15), transparent 40%, rgba(7, 8, 12, 0.55) 100%);
+  pointer-events: none;
+}
+.gcard-index {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
+}
+.gcard-type {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(7, 8, 12, 0.7);
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.gcard-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 6px;
+}
+.gcard-body h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(24px, 2.6vw, 36px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.gcard-host {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.gcard-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  transition:
+    background 0.35s var(--ease),
+    color 0.35s var(--ease),
+    transform 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+.gcard:hover .gcard-arrow {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  transform: rotate(45deg);
+}
+.gcard-desc {
+  padding: 0 6px;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.gcard-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 6px 4px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 600;
+}
+.gcard-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.gcard-stack span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--surface-2);
+}
+.gcard-end {
+  justify-content: center;
+  gap: 14px;
+  padding: clamp(24px, 3vw, 40px);
+  border-style: dashed;
+}
+.gcard-end h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.gcard-end p {
+  color: var(--text-2);
+  font-size: 14.5px;
+  max-width: 48ch;
+}
+.gcard-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gallery-progress {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 28px;
+  height: 1px;
+  background: var(--line);
+}
+.gallery-progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: 0 50%;
+}
+
+/* static fallback: narrow screens + reduced motion */
+@media (max-width: 899px) {
+  .gallery {
+    height: auto;
+  }
+  .gallery-sticky {
+    position: static;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+  .gallery-track {
+    flex-direction: column;
+    transform: none !important;
+    padding-inline: var(--gutter);
+  }
+  .gcard {
+    width: 100%;
+  }
+  .gallery-progress {
+    display: none;
+  }
+}
+.gallery.is-static {
+  height: auto;
+}
+.gallery.is-static .gallery-sticky {
+  position: static;
+  height: auto;
+  overflow-x: auto;
+}

@@ -1,18 +1,24 @@
-import { resume } from "../data/resume";
+import { useI18n } from "../i18n";
 import { Reveal } from "../lib/Reveal";
+import { Scramble } from "../lib/Scramble";
 
 export function Education() {
+  const { t, resume } = useI18n();
+  const [a, b] = t.education.title;
   return (
     <section className="section education" id="education">
       <div className="container">
         <div className="edu-grid">
           <div>
             <Reveal>
-              <span className="eyebrow">Education & languages</span>
+              <span className="eyebrow">
+                <Scramble text={t.education.eyebrow} />
+              </span>
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="h2">
-                Background <em>&amp; basics.</em>
+                {a}
+                <em>{b}</em>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>

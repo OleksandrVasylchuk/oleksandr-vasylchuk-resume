@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { resume, CV_URL } from "../data/resume";
+import { CV_URL } from "../data/resume";
+import { useI18n } from "../i18n";
 import { Reveal } from "../lib/Reveal";
-import { Runner, tierFor } from "../lib/runner";
+import { Scramble } from "../lib/Scramble";
+import { Runner, tierIndex } from "../lib/runner";
 import { ArrowUpRight, DownloadIcon } from "../lib/Icons";
 
 const HS_KEY = "ov-deploy-run-hs";
 
 export function Playground() {
+  const { t, resume } = useI18n();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const runner = useRef<Runner | null>(null);
   const [score, setScore] = useState(0);
@@ -90,12 +93,12 @@ export function Playground() {
     return () => io.disconnect();
   }, [phase]);
 
-  const tier = tierFor(score);
+  const tier = t.play.tiers[tierIndex(score)];
+  const [a, b] = t.play.title;
 
   const share = async () => {
-    const text = `I scored ${score} in Deploy Run on ${resume.name}'s portfolio (${tier.title}). Beat me: ${resume.siteUrl}#play`;
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(t.play.shareText(score, tier.title, resume.name, resume.siteUrl));
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
@@ -109,18 +112,19 @@ export function Playground() {
         <div className="section-head">
           <div>
             <Reveal>
-              <span className="eyebrow">Recruiter zone</span>
+              <span className="eyebrow">
+                <Scramble text={t.play.eyebrow} />
+              </span>
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="h2">
-                Tired of scrolling CVs? <em>Ship one.</em>
+                {a}
+                <em>{b}</em>
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <p className="lead">
-              You are the deploy. Jump over bugs, plugin conflicts and the white screen of death, grab coffee for bonus points. Space, ↑ or tap to jump. Double jump works.
-            </p>
+            <p className="lead">{t.play.lead}</p>
           </Reveal>
         </div>
 
@@ -130,35 +134,35 @@ export function Playground() {
               <canvas ref={canvasRef} className="play-canvas" tabIndex={0} aria-label="Deploy Run mini game" onPointerDown={act} />
               <div className="play-hud">
                 <span>
-                  Score <strong>{score}</strong>
+                  {t.play.score} <strong>{score}</strong>
                 </span>
                 <span>
-                  Best <strong>{best}</strong>
+                  {t.play.best} <strong>{best}</strong>
                 </span>
               </div>
               {phase !== "playing" && (
                 <div className="play-overlay">
                   {phase === "over" ? (
                     <>
-                      <span className="play-overlay-eyebrow">Deploy finished</span>
+                      <span className="play-overlay-eyebrow">{t.play.finished}</span>
                       <h3>{tier.title}</h3>
                       <p>{tier.note}</p>
                       <div className="play-overlay-actions">
                         <button className="btn btn-primary" onClick={start} type="button">
-                          Deploy again
+                          {t.play.again}
                         </button>
                         <button className="btn btn-ghost" onClick={share} type="button">
-                          {copied ? "Copied!" : "Share score"}
+                          {copied ? t.play.copied : t.play.share}
                         </button>
                       </div>
                     </>
                   ) : (
                     <>
-                      <span className="play-overlay-eyebrow">Deploy Run</span>
-                      <h3>Press play to deploy</h3>
-                      <p>Every 10 px is a point. Coffee is 50. Bugs end the sprint.</p>
+                      <span className="play-overlay-eyebrow">{t.play.name}</span>
+                      <h3>{t.play.pressPlay}</h3>
+                      <p>{t.play.rules}</p>
                       <button className="btn btn-primary" onClick={start} type="button">
-                        ▶ Start deploy
+                        {t.play.start}
                       </button>
                     </>
                   )}
@@ -169,37 +173,39 @@ export function Playground() {
 
           <Reveal className="play-side" delay={0.1} y={36}>
             <div className="card brief">
-              <span className="eyebrow">60-second brief</span>
-              <h3>What you actually need to know</h3>
+              <span className="eyebrow">{t.play.briefEyebrow}</span>
+              <h3>{t.play.briefTitle}</h3>
               <dl className="brief-list">
                 <div>
-                  <dt>Looking for</dt>
-                  <dd>Senior Full-Stack WordPress / Tech Lead, remote</dd>
+                  <dt>{t.play.lookingFor}</dt>
+                  <dd>{t.play.lookingForV}</dd>
                 </div>
                 <div>
-                  <dt>Core stack</dt>
+                  <dt>{t.play.core}</dt>
                   <dd>PHP · WordPress · WooCommerce · REST API · React · Docker · CI/CD</dd>
                 </div>
                 <div>
-                  <dt>Strongest at</dt>
-                  <dd>Custom plugins with heavy backend logic, third-party integrations, Figma-to-production ownership</dd>
+                  <dt>{t.play.strongest}</dt>
+                  <dd>{t.play.strongestV}</dd>
                 </div>
                 <div>
-                  <dt>Leads today</dt>
-                  <dd>Architecture, code review and mentoring across concurrent client projects at Qwerty-Soft</dd>
+                  <dt>{t.play.leads}</dt>
+                  <dd>{t.play.leadsV}</dd>
                 </div>
                 <div>
-                  <dt>Location</dt>
-                  <dd>{resume.location}, EET (UTC+2/+3), overlaps EU and US-East mornings</dd>
+                  <dt>{t.play.location}</dt>
+                  <dd>
+                    {resume.location}, {t.play.locationV}
+                  </dd>
                 </div>
                 <div>
-                  <dt>Languages</dt>
+                  <dt>{t.play.languages}</dt>
                   <dd>{resume.languages.map((l) => `${l.name} (${l.level})`).join(" · ")}</dd>
                 </div>
               </dl>
               <div className="brief-actions">
                 <a className="btn btn-primary" href={CV_URL} download>
-                  <DownloadIcon /> CV (PDF)
+                  <DownloadIcon /> {t.play.cv}
                 </a>
                 <a className="btn btn-ghost" href={resume.contacts.linkedin} target="_blank" rel="noreferrer">
                   LinkedIn <ArrowUpRight />

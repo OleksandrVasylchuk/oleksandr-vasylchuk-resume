@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { resume, CV_URL } from "../data/resume";
+import { CV_URL } from "../data/resume";
+import { useI18n } from "../i18n";
 import { Reveal } from "../lib/Reveal";
+import { Scramble } from "../lib/Scramble";
 import { Magnetic } from "../lib/Magnetic";
 import { ArrowUpRight, DownloadIcon, GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from "../lib/Icons";
 
 export function Contact() {
+  const { t, resume } = useI18n();
   const [copied, setCopied] = useState(false);
   const { contacts } = resume;
+  const [a, b] = t.contact.title;
 
   const copyEmail = async () => {
     try {
@@ -23,18 +27,20 @@ export function Contact() {
       <div className="contact-glow" aria-hidden />
       <div className="container">
         <Reveal>
-          <span className="eyebrow">Contact</span>
+          <span className="eyebrow">
+            <Scramble text={t.contact.eyebrow} />
+          </span>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="h2 contact-title">
-            Let&apos;s build something
+            {a}
             <br />
-            <em>that holds up.</em>
+            <em>{b}</em>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="lead">
-            {resume.availability}. Remote-first, international teams, product or agency. The fastest way to reach me is email.
+            {resume.availability}. {t.contact.lead}
           </p>
         </Reveal>
 
@@ -46,12 +52,12 @@ export function Contact() {
             </a>
           </Magnetic>
           <button className="btn btn-ghost" onClick={copyEmail} type="button">
-            {copied ? "Copied!" : "Copy email"}
+            {copied ? t.contact.copied : t.contact.copy}
           </button>
           <Magnetic>
             <a className="btn btn-ghost" href={CV_URL} download>
               <DownloadIcon />
-              Download CV (PDF)
+              {t.nav.cvFull}
             </a>
           </Magnetic>
         </Reveal>
@@ -77,7 +83,7 @@ export function Contact() {
             <li>
               <a href={`tel:${contacts.phone}`}>
                 <PhoneIcon />
-                <span>Phone</span>
+                <span>{t.contact.phone}</span>
                 <small>{contacts.phoneDisplay}</small>
                 <ArrowUpRight width={14} height={14} />
               </a>
@@ -90,13 +96,14 @@ export function Contact() {
 }
 
 export function Footer() {
+  const { t, resume } = useI18n();
   return (
     <footer className="footer">
       <div className="container footer-inner">
         <span>
           © {new Date().getFullYear()} {resume.name}
         </span>
-        <span className="footer-built">Built with React, Three.js &amp; Motion · Deployed on Vercel</span>
+        <span className="footer-built">{t.contact.built}</span>
         <a href={CV_URL} download className="footer-cv">
           <DownloadIcon width={14} height={14} /> CV (PDF)
         </a>

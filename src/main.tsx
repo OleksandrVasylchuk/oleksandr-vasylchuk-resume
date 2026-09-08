@@ -3,10 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./styles/global.css";
 import "./styles/sections.css";
 import "./styles/extras.css";
+import "./styles/gallery.css";
+import { I18nProvider } from "./i18n";
 import App from "./App";
 
 createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
-    <App />
+    <I18nProvider>
+      <App />
+    </I18nProvider>
   </StrictMode>,
 );

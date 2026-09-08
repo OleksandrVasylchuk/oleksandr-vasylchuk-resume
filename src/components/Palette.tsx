@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { resume, CV_URL } from "../data/resume";
+import { CV_URL } from "../data/resume";
+import { useI18n } from "../i18n";
 import { scrollToHash } from "../lib/useLenis";
 
 interface Item {
@@ -28,12 +29,14 @@ export function usePalette() {
 }
 
 export function Palette({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const { t, resume, toggle } = useI18n();
   const [q, setQ] = useState("");
   const [idx, setIdx] = useState(0);
   const [toast, setToast] = useState("");
   const input = useRef<HTMLInputElement>(null);
 
   const items = useMemo<Item[]>(() => {
+    const L = t.palette.items;
     const go = (hash: string) => () => {
       onClose();
       scrollToHash(hash);
@@ -48,21 +51,22 @@ export function Palette({ open, onClose }: { open: boolean; onClose: () => void 
       }
     };
     return [
-      { id: "cv", label: "Download CV (PDF)", hint: "ATS-friendly", keywords: "resume pdf download cv hire", run: () => { onClose(); window.location.href = CV_URL; } },
-      { id: "email", label: "Copy email", hint: resume.contacts.email, keywords: "mail contact copy", run: copy(resume.contacts.email, "Email copied") },
-      { id: "phone", label: "Copy phone", hint: resume.contacts.phoneDisplay, keywords: "call phone number", run: copy(resume.contacts.phone, "Phone copied") },
-      { id: "linkedin", label: "Open LinkedIn", hint: resume.contacts.linkedinHandle, keywords: "linkedin social profile", run: () => window.open(resume.contacts.linkedin, "_blank", "noreferrer") },
-      { id: "github", label: "Open GitHub", hint: resume.contacts.githubHandle, keywords: "github code repos", run: () => window.open(resume.contacts.github, "_blank", "noreferrer") },
-      { id: "play", label: "Play Deploy Run", hint: "mini game for recruiters", keywords: "game play fun recruiter", run: go("#play") },
-      { id: "brief", label: "60-second brief", hint: "the TL;DR", keywords: "tldr brief summary recruiter quick", run: go("#play") },
-      { id: "about", label: "Go to About", hint: "section", keywords: "about me bio", run: go("#about") },
-      { id: "experience", label: "Go to Experience", hint: "section", keywords: "work history jobs timeline", run: go("#experience") },
-      { id: "work", label: "Go to Selected work", hint: "section", keywords: "projects portfolio sites", run: go("#work") },
-      { id: "stack", label: "Go to Tech stack", hint: "section", keywords: "skills tools tech", run: go("#stack") },
-      { id: "contact", label: "Go to Contact", hint: "section", keywords: "contact reach talk", run: go("#contact") },
-      { id: "top", label: "Back to top", hint: "hero", keywords: "top home hero", run: go("#top") },
+      { id: "cv", label: L.cv[0], hint: L.cv[1], keywords: "resume pdf download cv hire резюме", run: () => { onClose(); window.location.href = CV_URL; } },
+      { id: "email", label: L.email[0], hint: resume.contacts.email, keywords: "mail contact copy пошта", run: copy(resume.contacts.email, t.palette.toastEmail) },
+      { id: "phone", label: L.phone[0], hint: resume.contacts.phoneDisplay, keywords: "call phone number телефон", run: copy(resume.contacts.phone, t.palette.toastPhone) },
+      { id: "linkedin", label: L.linkedin[0], hint: resume.contacts.linkedinHandle, keywords: "linkedin social profile", run: () => window.open(resume.contacts.linkedin, "_blank", "noreferrer") },
+      { id: "github", label: L.github[0], hint: resume.contacts.githubHandle, keywords: "github code repos", run: () => window.open(resume.contacts.github, "_blank", "noreferrer") },
+      { id: "play", label: L.play[0], hint: L.play[1], keywords: "game play fun recruiter гра", run: go("#play") },
+      { id: "brief", label: L.brief[0], hint: L.brief[1], keywords: "tldr brief summary recruiter quick бриф", run: go("#play") },
+      { id: "lang", label: L.lang[0], hint: L.lang[1], keywords: "language мова english ukrainian українська", run: () => { toggle(); onClose(); } },
+      { id: "about", label: L.about[0], hint: L.about[1], keywords: "about me bio про мене", run: go("#about") },
+      { id: "experience", label: L.experience[0], hint: L.experience[1], keywords: "work history jobs timeline досвід", run: go("#experience") },
+      { id: "work", label: L.work[0], hint: L.work[1], keywords: "projects portfolio sites роботи", run: go("#work") },
+      { id: "stack", label: L.stack[0], hint: L.stack[1], keywords: "skills tools tech стек", run: go("#stack") },
+      { id: "contact", label: L.contact[0], hint: L.contact[1], keywords: "contact reach talk контакти", run: go("#contact") },
+      { id: "top", label: L.top[0], hint: L.top[1], keywords: "top home hero", run: go("#top") },
     ];
-  }, [onClose]);
+  }, [onClose, t, resume, toggle]);
 
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase();
@@ -109,11 +113,11 @@ export function Palette({ open, onClose }: { open: boolean; onClose: () => void 
           >
             <div className="palette-input">
               <span className="palette-prompt">›</span>
-              <input ref={input} value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={onKey} placeholder="Type a command… (cv, email, play, contact)" aria-label="Search commands" />
+              <input ref={input} value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={onKey} placeholder={t.palette.placeholder} aria-label="Search commands" />
               <kbd>esc</kbd>
             </div>
             <ul className="palette-list" role="listbox">
-              {filtered.length === 0 && <li className="palette-empty">Nothing found. Try “cv” or “email”.</li>}
+              {filtered.length === 0 && <li className="palette-empty">{t.palette.empty}</li>}
               {filtered.map((it, i) => (
                 <li key={it.id} role="option" aria-selected={i === idx} className={i === idx ? "is-active" : ""} onMouseEnter={() => setIdx(i)} onClick={it.run}>
                   <span>{it.label}</span>
@@ -122,9 +126,9 @@ export function Palette({ open, onClose }: { open: boolean; onClose: () => void 
               ))}
             </ul>
             <div className="palette-foot">
-              <span>↑↓ navigate</span>
-              <span>↵ run</span>
-              <span>ctrl/⌘ K toggle</span>
+              <span>{t.palette.nav}</span>
+              <span>{t.palette.run}</span>
+              <span>{t.palette.toggle}</span>
               {toast && <span className="palette-toast">{toast}</span>}
             </div>
           </motion.div>

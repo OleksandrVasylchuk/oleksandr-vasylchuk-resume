@@ -1,22 +1,24 @@
 import { useEffect, useState, type MouseEvent } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { CV_URL } from "../data/resume";
+import { useI18n } from "../i18n";
 import { scrollToHash } from "../lib/useLenis";
 import { DownloadIcon } from "../lib/Icons";
-
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#work", label: "Work" },
-  { href: "#stack", label: "Stack" },
-  { href: "#play", label: "Play" },
-  { href: "#contact", label: "Contact" },
-];
 
 export function Nav({ ready, onPalette }: { ready: boolean; onPalette: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const { t, lang, toggle } = useI18n();
+
+  const links = [
+    { href: "#about", label: t.nav.about },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#work", label: t.nav.work },
+    { href: "#stack", label: t.nav.stack },
+    { href: "#play", label: t.nav.play },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -54,15 +56,19 @@ export function Nav({ ready, onPalette }: { ready: boolean; onPalette: () => voi
         </nav>
 
         <div className="nav-actions">
-          <button className="nav-k" type="button" onClick={onPalette} aria-label="Open command palette" data-cursor="⌘K">
+          <button className="nav-lang" type="button" onClick={toggle} aria-label={t.nav.lang} data-cursor={lang === "en" ? "UA" : "EN"}>
+            <span className={lang === "en" ? "is-on" : ""}>EN</span>
+            <span className={lang === "uk" ? "is-on" : ""}>UA</span>
+          </button>
+          <button className="nav-k" type="button" onClick={onPalette} aria-label={t.nav.palette} data-cursor="⌘K">
             <kbd>⌘</kbd>
             <kbd>K</kbd>
           </button>
           <a className="btn btn-primary nav-cv" href={CV_URL} download>
             <DownloadIcon />
-            <span>Download CV</span>
+            <span>{t.nav.cv}</span>
           </a>
-          <button className="nav-burger" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen((v) => !v)}>
+          <button className="nav-burger" aria-label={open ? t.nav.menuClose : t.nav.menuOpen} aria-expanded={open} onClick={() => setOpen((v) => !v)}>
             <span />
             <span />
           </button>
@@ -76,7 +82,7 @@ export function Nav({ ready, onPalette }: { ready: boolean; onPalette: () => voi
           </a>
         ))}
         <a href={CV_URL} download className="btn btn-primary" tabIndex={open ? 0 : -1}>
-          <DownloadIcon /> Download CV (PDF)
+          <DownloadIcon /> {t.nav.cvFull}
         </a>
       </div>
     </motion.header>

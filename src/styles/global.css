@@ -14,7 +14,8 @@
   --accent-ink: #0a0d02;
   --glow: rgba(200, 255, 77, 0.35);
 
-  --font-display: "Syne", "Inter", system-ui, sans-serif;
+  /* Syne has no Cyrillic; Unbounded picks up those glyphs for the Ukrainian UI */
+  --font-display: "Syne", "Unbounded", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
