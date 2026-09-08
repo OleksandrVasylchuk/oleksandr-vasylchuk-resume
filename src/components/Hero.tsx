@@ -6,11 +6,11 @@ import { Magnetic } from "../lib/Magnetic";
 import { scrollToHash } from "../lib/useLenis";
 import { ArrowDown, DownloadIcon, SparkIcon } from "../lib/Icons";
 
-const Scene = lazy(() => import("./Scene").then((m) => ({ default: m.Scene })));
+const ParticleField = lazy(() => import("./ParticleField").then((m) => ({ default: m.ParticleField })));
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export function Hero() {
+export function Hero({ ready }: { ready: boolean }) {
   const reduce = useReducedMotion();
   const [show3d, setShow3d] = useState(false);
   const [inView, setInView] = useState(true);
@@ -45,76 +45,59 @@ export function Hero() {
     scrollToHash(hash);
   };
 
+  const hidden = { opacity: 0, y: 16 };
+  const shown = { opacity: 1, y: 0 };
+  const fade = (delay: number) => ({
+    initial: reduce ? false : hidden,
+    animate: ready ? shown : hidden,
+    transition: { duration: 0.9, delay, ease: EASE },
+  });
+
   return (
     <section className="hero" id="top" ref={sectionRef}>
       {show3d && (
         <Suspense fallback={null}>
-          <Scene active={inView} />
+          <ParticleField active={inView} />
         </Suspense>
       )}
       <div className="grid-bg" />
       <div className="hero-vignette" />
 
       <motion.div className="container hero-inner" style={{ y, opacity }}>
-        <motion.div
-          className="hero-status"
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
-        >
+        <motion.div className="hero-status" {...fade(0.2)}>
           <span className="pulse" />
           {resume.availability}
         </motion.div>
 
         <h1 className="hero-title">
-          <SplitWords text={resume.firstName} delay={0.35} />
+          <SplitWords text={resume.firstName} delay={0.3} play={ready} />
           <br />
-          <SplitWords text={resume.lastName} delay={0.5} className="hero-title-accent" />
+          <SplitWords text={resume.lastName} delay={0.45} play={ready} className="hero-title-accent" />
         </h1>
 
-        <motion.p
-          className="hero-role"
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.85, ease: EASE }}
-        >
+        <motion.p className="hero-role" {...fade(0.8)}>
           <SparkIcon width={14} height={14} /> {resume.title}
         </motion.p>
 
-        <motion.p
-          className="hero-lead"
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1, ease: EASE }}
-        >
+        <motion.p className="hero-lead" {...fade(0.95)}>
           {resume.heroLine}
         </motion.p>
 
-        <motion.div
-          className="hero-cta"
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.15, ease: EASE }}
-        >
+        <motion.div className="hero-cta" {...fade(1.1)}>
           <Magnetic>
-            <a className="btn btn-primary" href={CV_URL} download>
+            <a className="btn btn-primary" href={CV_URL} download data-cursor="PDF">
               <DownloadIcon />
               Download CV (PDF)
             </a>
           </Magnetic>
           <Magnetic>
-            <a className="btn btn-ghost" href="#contact" onClick={(e) => go(e, "#contact")}>
-              Let&apos;s talk
+            <a className="btn btn-ghost" href="#play" onClick={(e) => go(e, "#play")} data-cursor="Play">
+              Recruiter? Play a game
             </a>
           </Magnetic>
         </motion.div>
 
-        <motion.ul
-          className="hero-meta"
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.4 }}
-        >
+        <motion.ul className="hero-meta" {...fade(1.3)}>
           <li>
             <span>Currently</span>
             <strong>Tech Lead @ Qwerty-Soft</strong>
@@ -124,24 +107,22 @@ export function Hero() {
             <strong>{resume.location}</strong>
           </li>
           <li>
-            <span>Focus</span>
-            <strong>WordPress · WooCommerce · React</strong>
+            <span>Shortcut</span>
+            <strong>
+              <kbd>Ctrl</kbd> + <kbd>K</kbd> for commands
+            </strong>
           </li>
         </motion.ul>
       </motion.div>
 
-      <motion.a
-        href="#about"
-        className="hero-scroll"
-        onClick={(e) => go(e, "#about")}
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8, duration: 1 }}
-        aria-label="Scroll to about"
-      >
+      <motion.a href="#about" className="hero-scroll" onClick={(e) => go(e, "#about")} {...fade(1.7)} aria-label="Scroll to about">
         <span>Scroll</span>
         <ArrowDown />
       </motion.a>
+
+      <motion.div className="hero-hint" {...fade(1.9)} aria-hidden>
+        move the cursor · particles react
+      </motion.div>
     </section>
   );
 }

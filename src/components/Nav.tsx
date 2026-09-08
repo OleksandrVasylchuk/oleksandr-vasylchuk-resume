@@ -9,10 +9,11 @@ const links = [
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#stack", label: "Stack" },
+  { href: "#play", label: "Play" },
   { href: "#contact", label: "Contact" },
 ];
 
-export function Nav() {
+export function Nav({ ready, onPalette }: { ready: boolean; onPalette: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
@@ -35,8 +36,8 @@ export function Nav() {
     <motion.header
       className={`nav ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`}
       initial={reduce ? false : { y: -40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+      animate={ready ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
     >
       <div className="container nav-inner">
         <a href="#top" className="nav-logo" onClick={(e) => go(e, "#top")} aria-label="Back to top">
@@ -53,6 +54,10 @@ export function Nav() {
         </nav>
 
         <div className="nav-actions">
+          <button className="nav-k" type="button" onClick={onPalette} aria-label="Open command palette" data-cursor="⌘K">
+            <kbd>⌘</kbd>
+            <kbd>K</kbd>
+          </button>
           <a className="btn btn-primary nav-cv" href={CV_URL} download>
             <DownloadIcon />
             <span>Download CV</span>

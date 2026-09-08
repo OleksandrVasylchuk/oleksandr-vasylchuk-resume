@@ -59,7 +59,7 @@ export function StaggerItem({ children, className, as = "div" }: { children: Rea
 }
 
 /** Splits a string into words that animate up one by one. */
-export function SplitWords({ text, delay = 0, className }: { text: string; delay?: number; className?: string }) {
+export function SplitWords({ text, delay = 0, className, play = true }: { text: string; delay?: number; className?: string; play?: boolean }) {
   const reduce = useReducedMotion();
   const words = text.split(" ");
   return (
@@ -70,7 +70,7 @@ export function SplitWords({ text, delay = 0, className }: { text: string; delay
             <motion.span
               style={{ display: "inline-block" }}
               initial={reduce ? false : { y: "110%", rotate: 4 }}
-              animate={{ y: "0%", rotate: 0 }}
+              animate={play || reduce ? { y: "0%", rotate: 0 } : { y: "110%", rotate: 4 }}
               transition={{ duration: 0.9, delay: delay + i * 0.045, ease: EASE }}
             >
               {w}
