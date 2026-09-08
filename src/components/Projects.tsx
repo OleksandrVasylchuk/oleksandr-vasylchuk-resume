@@ -60,7 +60,7 @@ export function Projects() {
             {featuredProjects.map((p, i) => (
               <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="gcard" data-cursor="Open" aria-label={`${p.name} — ${t.work.open}`}>
                 <div className="gcard-media">
-                  <img src={`/projects/${slug(p.url)}.jpg`} alt={`${p.name}`} loading="lazy" decoding="async" width={1538} height={784} />
+                  <img src={`/projects/${slug(p.url)}.jpg`} alt={`${p.name}`} loading="lazy" decoding="async" width={2160} height={1215} />
                   <span className="gcard-index">{String(i + 1).padStart(2, "0")}</span>
                   <span className="gcard-type">{p.type}</span>
                 </div>
