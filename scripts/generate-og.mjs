@@ -74,8 +74,15 @@ const html = `<!doctype html>
   <div class="url">${data.siteUrl.replace(/^https?:\/\//, "")}</div>
 </body></html>`;
 
+const chrome = process.env.CHROME_PATH || "C:/Program Files/Google/Chrome/Application/chrome.exe";
+if (!fs.existsSync(chrome)) {
+  // CI (Vercel) has no local Chrome: public/og.png is committed, so keep the build green.
+  console.log("… no local Chrome found, keeping the committed public/og.png");
+  process.exit(0);
+}
+
 const browser = await puppeteer.launch({
-  executablePath: process.env.CHROME_PATH || "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  executablePath: chrome,
   headless: true,
   args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars"],
 });
