@@ -8,7 +8,7 @@
   "availability": "Open to Senior / Tech Lead roles",
   "siteUrl": "https://oleksandr-vasylchuk.vercel.app",
   "cvFile": "Oleksandr_Vasylchuk_CV.pdf",
-  "summary": "Senior Full-Stack Developer with 5+ years delivering production-grade solutions for international clients — primarily WordPress / WooCommerce, plus solid React and Next.js. Author of the open-source WordPress plugin WinOnWeb Migrate on WordPress.org. Deep expertise in custom plugin development with complex backend logic and third-party API integrations, Git-based CI/CD pipelines for staging and production, and full-cycle ownership from Figma to deployment. Currently Tech Lead at Qwerty-Soft, driving architecture decisions, code reviews and team management across concurrent outsourced projects.",
+  "summary": "Senior Full-Stack Developer with 5+ years delivering production-grade solutions for international clients — primarily WordPress / WooCommerce, plus solid React and Next.js. Author of the open-source WordPress plugin WinOnWeb Migrate on WordPress.org and of Webtune Voice, an Electron + Next.js desktop app for AI video translation and dubbing. Deep expertise in custom plugin development with complex backend logic and third-party API integrations, Git-based CI/CD pipelines for staging and production, and full-cycle ownership from Figma to deployment. Currently Tech Lead at Qwerty-Soft, driving architecture decisions, code reviews and team management across concurrent outsourced projects.",
   "heroLine": "I architect and ship WordPress & WooCommerce platforms that hold up in production — custom plugins, API integrations, CI/CD, and teams that deliver.",
   "contacts": {
     "phone": "+380990241220",
@@ -89,6 +89,20 @@
       ]
     },
     {
+      "name": "Node.js, Desktop & AI",
+      "skills": [
+        "Node.js",
+        "Electron",
+        "FFmpeg",
+        "LLM APIs (Gemini)",
+        "Text-to-Speech / SSML",
+        "Speech Recognition (Whisper)",
+        "YouTube Data API",
+        "Job Queues",
+        "Vitest"
+      ]
+    },
+    {
       "name": "DevOps & Tooling",
       "skills": [
         "Git",
@@ -160,8 +174,9 @@
       "bullets": [
         "Own studio alongside the Tech Lead role: end-to-end delivery of WordPress / WooCommerce stores and Next.js web apps, from design to production.",
         "Authored and published WinOnWeb Migrate on WordPress.org: chunked, resumable site migration with no size limits, atomic database switch via temporary tables, 7-day undo, serialized-data-safe URL rewriting, .wpress / Duplicator import, incremental scheduled backups and a WP-CLI interface.",
-        "Built WooCommerce stores for e-commerce brands in Ukraine and Kazakhstan (sneakers, family footwear, a caviar producer's multi-domain shops, B2B imports) and a multilingual recipe platform with 200+ recipes in 8 languages.",
-        "Shipped a React / Next.js content platform alongside the WordPress work."
+        "Built WooCommerce stores for e-commerce brands in Ukraine and Kazakhstan (sneakers, family footwear, a caviar producer's multi-domain shops, B2B imports) and a multilingual recipe platform with 530 recipes in 5 languages.",
+        "Shipped Manhwa Stories, a Next.js 16 / TypeScript platform that uses YouTube as its CMS: the YouTube Data API feeds 860+ story pages in two languages, rebuilt via ISR.",
+        "Built Webtune Voice, a desktop app (Electron + Next.js 15 / React 19 + Node.js) that turns a YouTube video into a translated, multi-voice dubbed video: yt-dlp ingest → LLM translation with an automated QA loop (Gemini) → per-speaker voice casting and SSML → TTS → vocal separation (Demucs) and speech recognition (faster-whisper) → FFmpeg assembly with segment-level lip-sync timing. Includes a visual-story studio (script → voice → visuals → edit → package), a background job queue that survives sleep/restarts, a Windows installer, and 500+ automated test files (Vitest). Used by other creators for their own channels."
       ],
       "projects": [
         {
@@ -537,7 +552,7 @@
       "url": "https://smakota.kitchen/",
       "type": "Recipe platform",
       "company": "WinOnWeb",
-      "description": "Multilingual recipe platform with 200+ recipes in 8 languages: custom theme, categories and curated collections, recipe search, weekly menus and a seasonal produce calendar.",
+      "description": "Multilingual recipe platform with 530 recipes in 5 languages: custom theme, categories and curated collections, recipe search, weekly menus and a seasonal produce calendar.",
       "stack": [
         "WordPress",
         "Custom Theme",

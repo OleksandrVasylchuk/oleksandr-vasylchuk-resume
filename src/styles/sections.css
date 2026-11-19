@@ -868,6 +868,10 @@
   .stack-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* odd group count: let the last card take the full row instead of leaving a hole */
+  .stack-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 .stack-card {
   padding: clamp(24px, 3vw, 34px);
