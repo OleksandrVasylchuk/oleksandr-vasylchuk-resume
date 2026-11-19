@@ -160,7 +160,7 @@
       "bullets": [
         "Own studio alongside the Tech Lead role: end-to-end delivery of WordPress / WooCommerce stores and Next.js web apps, from design to production.",
         "Authored and published WinOnWeb Migrate on WordPress.org: chunked, resumable site migration with no size limits, atomic database switch via temporary tables, 7-day undo, serialized-data-safe URL rewriting, .wpress / Duplicator import, incremental scheduled backups and a WP-CLI interface.",
-        "Built custom WooCommerce themes for Ukrainian e-commerce brands (sneakers, family footwear) and a multilingual recipe platform with 200+ recipes in 8 languages.",
+        "Built WooCommerce stores for e-commerce brands in Ukraine and Kazakhstan (sneakers, family footwear, a caviar producer's multi-domain shops, B2B imports) and a multilingual recipe platform with 200+ recipes in 8 languages.",
         "Shipped a React / Next.js content platform alongside the WordPress work."
       ],
       "projects": [
@@ -187,6 +187,30 @@
         {
           "name": "Manhwa Stories",
           "url": "https://manhvastories.com/"
+        },
+        {
+          "name": "Lemberg Ikra UA",
+          "url": "https://www.lemberg-ikra.com.ua/"
+        },
+        {
+          "name": "Lemberg Ikra",
+          "url": "https://www.lemberg-ikra.com/"
+        },
+        {
+          "name": "Lemberg Top",
+          "url": "https://www.lemberg.top/"
+        },
+        {
+          "name": "Merey Alliance",
+          "url": "https://mereyalliance.kz/"
+        },
+        {
+          "name": "Green Gaia",
+          "url": "https://www.greengaia.com.ua/"
+        },
+        {
+          "name": "Mudri Rishennya",
+          "url": "https://www.mudririshennya.com/"
         }
       ]
     },
@@ -485,28 +509,12 @@
     "description": "E-commerce and custom WordPress projects for businesses and individual clients. Responsive interfaces, advanced ACF, dynamic content management.",
     "projects": [
       {
-        "name": "Green Gaia",
-        "url": "https://www.greengaia.com.ua/"
-      },
-      {
-        "name": "Mudri Rishennya",
-        "url": "https://www.mudririshennya.com/"
-      },
-      {
         "name": "Eiwa Gracia",
         "url": "https://eiwa-gracia.com/en/"
       },
       {
         "name": "Ikra Lemberg",
         "url": "https://www.ikra-lemberg.in.ua/"
-      },
-      {
-        "name": "Lemberg Ikra UA",
-        "url": "https://www.lemberg-ikra.com.ua/"
-      },
-      {
-        "name": "Lemberg Ikra",
-        "url": "https://lemberg-ikra.com/"
       }
     ]
   },
