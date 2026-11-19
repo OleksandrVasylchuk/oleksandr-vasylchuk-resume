@@ -2,13 +2,13 @@
   "name": "Oleksandr Vasylchuk",
   "firstName": "Oleksandr",
   "lastName": "Vasylchuk",
-  "title": "Senior Full-Stack WordPress Developer · Tech Lead",
+  "title": "Senior Full-Stack Developer · WordPress & React / Next.js · Tech Lead",
   "shortTitle": "Senior Full-Stack Developer & Tech Lead",
   "location": "Ukraine · Remote worldwide",
   "availability": "Open to Senior / Tech Lead roles",
   "siteUrl": "https://oleksandr-vasylchuk.vercel.app",
   "cvFile": "Oleksandr_Vasylchuk_CV.pdf",
-  "summary": "Senior Full-Stack WordPress Developer with 5+ years delivering production-grade solutions for international clients. Deep expertise in custom plugin development with complex backend logic and third-party API integrations, Git-based CI/CD pipelines for staging and production, and full-cycle ownership from Figma to deployment. Currently Tech Lead at Qwerty-Soft, driving architecture decisions, code reviews and team management across concurrent outsourced projects.",
+  "summary": "Senior Full-Stack Developer with 5+ years delivering production-grade solutions for international clients — primarily WordPress / WooCommerce, plus solid React and Next.js. Author of the open-source WordPress plugin WinOnWeb Migrate on WordPress.org. Deep expertise in custom plugin development with complex backend logic and third-party API integrations, Git-based CI/CD pipelines for staging and production, and full-cycle ownership from Figma to deployment. Currently Tech Lead at Qwerty-Soft, driving architecture decisions, code reviews and team management across concurrent outsourced projects.",
   "heroLine": "I architect and ship WordPress & WooCommerce platforms that hold up in production — custom plugins, API integrations, CI/CD, and teams that deliver.",
   "contacts": {
     "phone": "+380990241220",
@@ -76,6 +76,8 @@
         "JavaScript ES6+",
         "TypeScript",
         "React",
+        "Next.js",
+        "Tailwind CSS",
         "HTML5",
         "CSS3 / SASS",
         "BEM",
@@ -119,6 +121,7 @@
     "Custom Plugins",
     "REST API",
     "React",
+    "Next.js",
     "TypeScript",
     "ACF",
     "Gutenberg",
@@ -135,6 +138,58 @@
     "Core Web Vitals"
   ],
   "experience": [
+    {
+      "role": "Founder · Full-Stack Developer",
+      "company": "WinOnWeb",
+      "companyUrl": "https://winonweb.dev/",
+      "start": "2023-11",
+      "end": null,
+      "period": "2023 — Present",
+      "location": "Ukraine · Remote",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "WooCommerce",
+        "WP-CLI",
+        "MySQL",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "bullets": [
+        "Own studio alongside the Tech Lead role: end-to-end delivery of WordPress / WooCommerce stores and Next.js web apps, from design to production.",
+        "Authored and published WinOnWeb Migrate on WordPress.org: chunked, resumable site migration with no size limits, atomic database switch via temporary tables, 7-day undo, serialized-data-safe URL rewriting, .wpress / Duplicator import, incremental scheduled backups and a WP-CLI interface.",
+        "Built custom WooCommerce themes for Ukrainian e-commerce brands (sneakers, family footwear) and a multilingual recipe platform with 200+ recipes in 8 languages.",
+        "Shipped a React / Next.js content platform alongside the WordPress work."
+      ],
+      "projects": [
+        {
+          "name": "WinOnWeb Migrate",
+          "url": "https://wordpress.org/plugins/winonweb-migrate/"
+        },
+        {
+          "name": "Smakota",
+          "url": "https://smakota.kitchen/"
+        },
+        {
+          "name": "Deadstock",
+          "url": "https://deadstock.com.ua/"
+        },
+        {
+          "name": "Kaptsi",
+          "url": "https://kaptsi.com.ua/"
+        },
+        {
+          "name": "Forest Architects",
+          "url": "https://forestarchitects.pl/"
+        },
+        {
+          "name": "Manhwa Stories",
+          "url": "https://manhvastories.com/"
+        }
+      ]
+    },
     {
       "role": "Tech Lead · Full-Stack WordPress Developer",
       "company": "Qwerty-Soft",
@@ -456,6 +511,82 @@
     ]
   },
   "featuredProjects": [
+    {
+      "name": "WinOnWeb Migrate",
+      "url": "https://wordpress.org/plugins/winonweb-migrate/",
+      "type": "WordPress.org plugin",
+      "company": "WinOnWeb",
+      "description": "My open-source migration plugin: packs a site into one .wowm file with chunked, resumable transfer and no size limits, swaps the database atomically, keeps a 7-day undo and rewrites URLs safely inside serialized data. Full WP-CLI support.",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "WP-CLI",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Smakota",
+      "url": "https://smakota.kitchen/",
+      "type": "Recipe platform",
+      "company": "WinOnWeb",
+      "description": "Multilingual recipe platform with 200+ recipes in 8 languages: custom theme, categories and curated collections, recipe search, weekly menus and a seasonal produce calendar.",
+      "stack": [
+        "WordPress",
+        "Custom Theme",
+        "Multilingual",
+        "SEO"
+      ]
+    },
+    {
+      "name": "Deadstock",
+      "url": "https://deadstock.com.ua/",
+      "type": "Sneaker e-shop",
+      "company": "WinOnWeb",
+      "description": "Online sneaker and streetwear store: custom WooCommerce theme, brand and category catalog, product search, wishlist, size guide and Nova Poshta delivery with cash on delivery.",
+      "stack": [
+        "WooCommerce",
+        "Custom Theme",
+        "PHP",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Kaptsi",
+      "url": "https://kaptsi.com.ua/",
+      "type": "Footwear e-shop",
+      "company": "WinOnWeb",
+      "description": "Family footwear store with delivery across Ukraine: custom WooCommerce theme, catalog and checkout built on the latest WordPress and WooCommerce.",
+      "stack": [
+        "WooCommerce",
+        "Custom Theme",
+        "PHP",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Manhwa Stories",
+      "url": "https://manhvastories.com/",
+      "type": "Content platform",
+      "company": "WinOnWeb",
+      "description": "Next.js platform for AI-animated stories based on manhwa and novels, with series organised in reading order.",
+      "stack": [
+        "Next.js",
+        "React",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Forest Architects",
+      "url": "https://forestarchitects.pl/",
+      "type": "Architecture studio",
+      "company": "WinOnWeb",
+      "description": "Website for a Warsaw architecture studio: custom WordPress theme focused on the portfolio and project presentation.",
+      "stack": [
+        "WordPress",
+        "Custom Theme",
+        "PHP"
+      ]
+    },
     {
       "name": "Cobble London",
       "url": "https://cobble.london/",
