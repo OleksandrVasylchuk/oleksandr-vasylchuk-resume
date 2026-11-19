@@ -211,6 +211,10 @@
         {
           "name": "Mudri Rishennya",
           "url": "https://www.mudririshennya.com/"
+        },
+        {
+          "name": "Eiwa Gracia",
+          "url": "https://eiwa-gracia.com/en/"
         }
       ]
     },
@@ -508,10 +512,6 @@
     ],
     "description": "E-commerce and custom WordPress projects for businesses and individual clients. Responsive interfaces, advanced ACF, dynamic content management.",
     "projects": [
-      {
-        "name": "Eiwa Gracia",
-        "url": "https://eiwa-gracia.com/en/"
-      },
       {
         "name": "Ikra Lemberg",
         "url": "https://www.ikra-lemberg.in.ua/"
